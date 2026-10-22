@@ -1,0 +1,1635 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| AWAISI EMPORIUM
+| PREMIUM CONTACT PAGE
+|--------------------------------------------------------------------------
+| IMPORTANT:
+| Change only the email below.
+| The form will send customer messages to this email.
+|--------------------------------------------------------------------------
+*/
+
+$receiver_email = "YOUR_EMAIL_HERE@gmail.com";
+
+/*
+|--------------------------------------------------------------------------
+| BASIC SETTINGS
+|--------------------------------------------------------------------------
+*/
+
+$store_name = "Awaisi Emporium";
+$store_email = $receiver_email;
+$store_phone = "+92 300 0000000";
+$store_address = "Mansehra, Khyber Pakhtunkhwa, Pakistan";
+
+/*
+|--------------------------------------------------------------------------
+| FORM STATUS
+|--------------------------------------------------------------------------
+*/
+
+$success_message = "";
+$error_message = "";
+
+/*
+|--------------------------------------------------------------------------
+| FORM SUBMISSION
+|--------------------------------------------------------------------------
+*/
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    $name = trim($_POST["name"] ?? "");
+    $email = trim($_POST["email"] ?? "");
+    $phone = trim($_POST["phone"] ?? "");
+    $subject = trim($_POST["subject"] ?? "");
+    $message = trim($_POST["message"] ?? "");
+
+    if (
+        $name === "" ||
+        $email === "" ||
+        $subject === "" ||
+        $message === ""
+    ) {
+
+        $error_message = "Please fill in all required fields.";
+
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
+        $error_message = "Please enter a valid email address.";
+
+    } else {
+
+        /*
+        |--------------------------------------------------------------------------
+        | EMAIL CONTENT
+        |--------------------------------------------------------------------------
+        */
+
+        $email_subject = "Awaisi Emporium Contact — " . $subject;
+
+        $email_body =
+            "NEW CONTACT MESSAGE\n" .
+            "============================\n\n" .
+
+            "Customer Name: " . $name . "\n" .
+            "Customer Email: " . $email . "\n" .
+            "Phone: " . ($phone !== "" ? $phone : "Not provided") . "\n" .
+            "Subject: " . $subject . "\n\n" .
+
+            "Message:\n" .
+            $message . "\n\n" .
+
+            "============================\n" .
+            "Received from Awaisi Emporium website.";
+
+        /*
+        |--------------------------------------------------------------------------
+        | EMAIL HEADERS
+        |--------------------------------------------------------------------------
+        */
+
+        $headers = [];
+
+        $headers[] = "From: Awaisi Emporium <" . $receiver_email . ">";
+        $headers[] = "Reply-To: " . $email;
+        $headers[] = "Content-Type: text/plain; charset=UTF-8";
+
+        /*
+        |--------------------------------------------------------------------------
+        | SEND EMAIL
+        |--------------------------------------------------------------------------
+        */
+
+        $mail_sent = mail(
+            $receiver_email,
+            $email_subject,
+            $email_body,
+            implode("\r\n", $headers)
+        );
+
+        if ($mail_sent) {
+
+            $success_message =
+                "Thank you, " . $name .
+                ". Your message has been sent successfully.";
+
+            $_POST = [];
+
+        } else {
+
+            $error_message =
+                "Your message could not be sent right now. " .
+                "Please try again or contact us directly.";
+
+        }
+    }
+}
+
+?>
+
+<?php include "header.php"; ?>
+
+<main class="AEC_contactPage">
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <section class="AEC_hero">
+
+        <div class="AEC_heroGlow AEC_glowOne"></div>
+        <div class="AEC_heroGlow AEC_glowTwo"></div>
+
+        <div class="AEC_container">
+
+            <div class="AEC_heroContent">
+
+                <span class="AEC_eyebrow">
+                    AWAISI EMPORIUM
+                </span>
+
+                <h1>
+                    Let's Talk.
+                    <span>We're Here.</span>
+                </h1>
+
+                <p>
+                    Have a question about a product, an order,
+                    delivery, or anything else? Send us a message
+                    and our team will get back to you.
+                </p>
+
+                <div class="AEC_heroBadges">
+
+                    <span>
+                        <i class="fa-solid fa-shield-heart"></i>
+                        Trusted Shopping
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-headset"></i>
+                        Customer Support
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-envelope"></i>
+                        Direct Contact
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CONTACT CONTENT
+    ========================================================== -->
+
+    <section class="AEC_contactSection">
+
+        <div class="AEC_container">
+
+            <div class="AEC_contactGrid">
+
+                <!-- =================================================
+                     LEFT INFORMATION
+                ================================================== -->
+
+                <aside class="AEC_infoCard">
+
+                    <span class="AEC_sectionLabel">
+                        GET IN TOUCH
+                    </span>
+
+                    <h2>
+                        We'd Love To
+                        <span>Hear From You</span>
+                    </h2>
+
+                    <p>
+                        Whether you need help choosing a product,
+                        want to ask about your order, or simply
+                        want to contact Awaisi Emporium, we're here
+                        to help.
+                    </p>
+
+
+                    <div class="AEC_infoList">
+
+                        <a
+                            href="mailto:<?php echo htmlspecialchars($store_email); ?>"
+                            class="AEC_infoItem"
+                        >
+
+                            <div class="AEC_infoIcon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+
+                            <div>
+                                <small>Email</small>
+
+                                <strong>
+                                    <?php
+                                    echo htmlspecialchars($store_email);
+                                    ?>
+                                </strong>
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            href="tel:<?php echo htmlspecialchars($store_phone); ?>"
+                            class="AEC_infoItem"
+                        >
+
+                            <div class="AEC_infoIcon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+
+                            <div>
+                                <small>Phone</small>
+
+                                <strong>
+                                    <?php
+                                    echo htmlspecialchars($store_phone);
+                                    ?>
+                                </strong>
+                            </div>
+
+                        </a>
+
+
+                        <div class="AEC_infoItem">
+
+                            <div class="AEC_infoIcon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+                                <small>Location</small>
+
+                                <strong>
+                                    <?php
+                                    echo htmlspecialchars($store_address);
+                                    ?>
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="AEC_infoNote">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        <div>
+
+                            <strong>
+                                Need quick help?
+                            </strong>
+
+                            <p>
+                                Send us your question using the
+                                contact form and include your
+                                order details when necessary.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+
+                <!-- =================================================
+                     CONTACT FORM
+                ================================================== -->
+
+                <div class="AEC_formCard">
+
+                    <div class="AEC_formHeading">
+
+                        <span class="AEC_sectionLabel">
+                            SEND A MESSAGE
+                        </span>
+
+                        <h2>
+                            How Can We
+                            <span>Help?</span>
+                        </h2>
+
+                        <p>
+                            Fill out the form below. Your message
+                            will be sent directly to our email.
+                        </p>
+
+                    </div>
+
+
+                    <!-- SUCCESS -->
+
+                    <?php if ($success_message !== ""): ?>
+
+                        <div class="AEC_alert AEC_success">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <div>
+
+                                <strong>
+                                    Message Sent
+                                </strong>
+
+                                <span>
+                                    <?php
+                                    echo htmlspecialchars(
+                                        $success_message
+                                    );
+                                    ?>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    <?php endif; ?>
+
+
+                    <!-- ERROR -->
+
+                    <?php if ($error_message !== ""): ?>
+
+                        <div class="AEC_alert AEC_error">
+
+                            <i class="fa-solid fa-circle-exclamation"></i>
+
+                            <div>
+
+                                <strong>
+                                    Message Not Sent
+                                </strong>
+
+                                <span>
+                                    <?php
+                                    echo htmlspecialchars(
+                                        $error_message
+                                    );
+                                    ?>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    <?php endif; ?>
+
+
+                    <form
+                        method="POST"
+                        action=""
+                        class="AEC_form"
+                        id="contactForm"
+                    >
+
+                        <!-- NAME -->
+
+                        <div class="AEC_field">
+
+                            <label for="name">
+                                Full Name
+                                <span>*</span>
+                            </label>
+
+                            <div class="AEC_inputWrap">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter your full name"
+                                    value="<?php
+                                    echo htmlspecialchars(
+                                        $_POST["name"] ?? ""
+                                    );
+                                    ?>"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="AEC_field">
+
+                            <label for="email">
+                                Email Address
+                                <span>*</span>
+                            </label>
+
+                            <div class="AEC_inputWrap">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    value="<?php
+                                    echo htmlspecialchars(
+                                        $_POST["email"] ?? ""
+                                    );
+                                    ?>"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="AEC_field">
+
+                            <label for="phone">
+                                Phone Number
+                            </label>
+
+                            <div class="AEC_inputWrap">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="+92 300 0000000"
+                                    value="<?php
+                                    echo htmlspecialchars(
+                                        $_POST["phone"] ?? ""
+                                    );
+                                    ?>"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SUBJECT -->
+
+                        <div class="AEC_field">
+
+                            <label for="subject">
+                                Subject
+                                <span>*</span>
+                            </label>
+
+                            <div class="AEC_inputWrap">
+
+                                <i class="fa-regular fa-bookmark"></i>
+
+                                <select
+                                    id="subject"
+                                    name="subject"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select a subject
+                                    </option>
+
+                                    <option value="Product Question">
+                                        Product Question
+                                    </option>
+
+                                    <option value="Order Support">
+                                        Order Support
+                                    </option>
+
+                                    <option value="Delivery Question">
+                                        Delivery Question
+                                    </option>
+
+                                    <option value="Return / Exchange">
+                                        Return / Exchange
+                                    </option>
+
+                                    <option value="General Inquiry">
+                                        General Inquiry
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+
+                        <div class="AEC_field AEC_full">
+
+                            <label for="message">
+                                Your Message
+                                <span>*</span>
+                            </label>
+
+                            <div class="AEC_textareaWrap">
+
+                                <i class="fa-regular fa-message"></i>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="7"
+                                    maxlength="2000"
+                                    placeholder="Write your message here..."
+                                    required
+                                ><?php
+                                echo htmlspecialchars(
+                                    $_POST["message"] ?? ""
+                                );
+                                ?></textarea>
+
+                            </div>
+
+                            <div class="AEC_characterCount">
+                                <span id="messageCount">0</span>
+                                / 2000
+                            </div>
+
+                        </div>
+
+
+                        <!-- SUBMIT -->
+
+                        <div class="AEC_submitArea">
+
+                            <button
+                                type="submit"
+                                class="AEC_submitButton"
+                                id="submitButton"
+                            >
+
+                                <span>
+                                    Send Message
+                                </span>
+
+                                <i class="fa-solid fa-paper-plane"></i>
+
+                            </button>
+
+                            <small>
+                                <i class="fa-solid fa-lock"></i>
+                                Your information is used only to
+                                respond to your message.
+                            </small>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SUPPORT STRIP
+    ========================================================== -->
+
+    <section class="AEC_supportSection">
+
+        <div class="AEC_container">
+
+            <div class="AEC_supportGrid">
+
+                <div class="AEC_supportCard">
+
+                    <div class="AEC_supportIcon">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Order Assistance
+                        </strong>
+
+                        <span>
+                            Need help with an order?
+                            We're ready to assist.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="AEC_supportCard">
+
+                    <div class="AEC_supportIcon">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Product Questions
+                        </strong>
+
+                        <span>
+                            Ask us about products,
+                            availability and details.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="AEC_supportCard">
+
+                    <div class="AEC_supportIcon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Friendly Support
+                        </strong>
+
+                        <span>
+                            Clear answers with a
+                            customer-first experience.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<style>
+
+/* =========================================================
+   AWAISI EMPORIUM — CONTACT PAGE
+   All classes are isolated with AEC_
+========================================================= */
+
+:root {
+
+    --AEC_maroon: #6e1830;
+    --AEC_deep: #42101f;
+    --AEC_dark: #2b0a15;
+
+    --AEC_champagne: #d8b56a;
+    --AEC_champagneLight: #f1dca5;
+
+    --AEC_ivory: #fffdf8;
+    --AEC_cream: #f7eee2;
+
+    --AEC_text: #321923;
+    --AEC_muted: #806a70;
+
+    --AEC_border: #eadbd0;
+
+    --AEC_shadow:
+        0 25px 70px rgba(66, 16, 31, 0.10);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.AEC_contactPage,
+.AEC_contactPage * {
+    box-sizing: border-box;
+}
+
+.AEC_contactPage {
+    margin: 0;
+    color: var(--AEC_text);
+    background: var(--AEC_ivory);
+}
+
+.AEC_container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.AEC_hero {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 470px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(216, 181, 106, 0.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(110, 24, 48, 0.28),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #42101f,
+            #6e1830 55%,
+            #42101f
+        );
+
+    color: #fffdf8;
+}
+
+
+.AEC_heroGlow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(4px);
+}
+
+
+.AEC_glowOne {
+    width: 330px;
+    height: 330px;
+
+    right: -100px;
+    top: -120px;
+
+    background: rgba(216, 181, 106, 0.16);
+}
+
+
+.AEC_glowTwo {
+    width: 280px;
+    height: 280px;
+
+    left: -120px;
+    bottom: -130px;
+
+    background: rgba(255, 255, 255, 0.07);
+}
+
+
+.AEC_heroContent {
+    position: relative;
+    z-index: 2;
+
+    max-width: 800px;
+
+    padding: 90px 0;
+}
+
+
+.AEC_eyebrow,
+.AEC_sectionLabel {
+    display: inline-flex;
+    align-items: center;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+
+.AEC_eyebrow {
+    color: var(--AEC_champagneLight);
+    margin-bottom: 20px;
+}
+
+
+.AEC_hero h1 {
+    margin: 0;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: clamp(44px, 7vw, 78px);
+    line-height: 1.02;
+}
+
+
+.AEC_hero h1 span {
+    display: block;
+    color: var(--AEC_champagneLight);
+}
+
+
+.AEC_hero p {
+    max-width: 690px;
+
+    margin: 25px 0 0;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: rgba(255, 253, 248, 0.82);
+}
+
+
+.AEC_heroBadges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 32px;
+}
+
+
+.AEC_heroBadges span {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 15px;
+
+    border: 1px solid rgba(241, 220, 165, 0.24);
+    border-radius: 100px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #fffdf8;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.AEC_contactSection {
+    padding: 90px 0;
+    background: var(--AEC_ivory);
+}
+
+
+.AEC_contactGrid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 0.85fr)
+        minmax(500px, 1.35fr);
+
+    gap: 35px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   INFO CARD
+========================================================= */
+
+.AEC_infoCard {
+    position: relative;
+
+    padding: 42px;
+
+    border:
+        1px solid var(--AEC_border);
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf8,
+            #f7eee2
+        );
+
+    box-shadow: var(--AEC_shadow);
+
+    overflow: hidden;
+}
+
+
+.AEC_infoCard::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -100px;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(216, 181, 106, 0.13);
+
+    pointer-events: none;
+}
+
+
+.AEC_sectionLabel {
+    color: var(--AEC_maroon);
+}
+
+
+.AEC_infoCard h2,
+.AEC_formHeading h2 {
+    margin: 12px 0 15px;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.12;
+}
+
+
+.AEC_infoCard h2 span,
+.AEC_formHeading h2 span {
+    color: var(--AEC_maroon);
+}
+
+
+.AEC_infoCard > p {
+    color: var(--AEC_muted);
+    line-height: 1.8;
+}
+
+
+.AEC_infoList {
+    display: grid;
+    gap: 14px;
+
+    margin-top: 32px;
+}
+
+
+.AEC_infoItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px;
+
+    border:
+        1px solid var(--AEC_border);
+
+    border-radius: 17px;
+
+    color: inherit;
+    text-decoration: none;
+
+    background: rgba(255,255,255,0.62);
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.AEC_infoItem:hover {
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(110, 24, 48, 0.30);
+
+    box-shadow:
+        0 12px 25px
+        rgba(66,16,31,0.08);
+}
+
+
+.AEC_infoIcon {
+    flex: 0 0 48px;
+
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 15px;
+
+    color: var(--AEC_maroon);
+
+    background:
+        rgba(110, 24, 48, 0.08);
+}
+
+
+.AEC_infoItem small {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--AEC_muted);
+    font-size: 11px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.AEC_infoItem strong {
+    display: block;
+
+    word-break: break-word;
+
+    font-size: 14px;
+}
+
+
+.AEC_infoNote {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    gap: 13px;
+
+    margin-top: 28px;
+    padding-top: 25px;
+
+    border-top:
+        1px solid var(--AEC_border);
+}
+
+
+.AEC_infoNote > i {
+    color: var(--AEC_champagne);
+    font-size: 20px;
+}
+
+
+.AEC_infoNote strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.AEC_infoNote p {
+    margin: 0;
+
+    color: var(--AEC_muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.AEC_formCard {
+    padding: 45px;
+
+    border:
+        1px solid var(--AEC_border);
+
+    border-radius: 28px;
+
+    background: #ffffff;
+
+    box-shadow: var(--AEC_shadow);
+}
+
+
+.AEC_formHeading p {
+    margin: 0;
+
+    color: var(--AEC_muted);
+    line-height: 1.7;
+}
+
+
+.AEC_form {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+
+.AEC_field {
+    min-width: 0;
+}
+
+
+.AEC_full {
+    grid-column: 1 / -1;
+}
+
+
+.AEC_field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.AEC_field label span {
+    color: var(--AEC_maroon);
+}
+
+
+.AEC_inputWrap,
+.AEC_textareaWrap {
+    position: relative;
+}
+
+
+.AEC_inputWrap i,
+.AEC_textareaWrap i {
+    position: absolute;
+
+    left: 17px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--AEC_maroon);
+
+    pointer-events: none;
+}
+
+
+.AEC_textareaWrap i {
+    top: 22px;
+    transform: none;
+}
+
+
+.AEC_inputWrap input,
+.AEC_inputWrap select,
+.AEC_textareaWrap textarea {
+    width: 100%;
+
+    border:
+        1px solid var(--AEC_border);
+
+    border-radius: 15px;
+
+    outline: none;
+
+    background: #fffdfb;
+
+    color: var(--AEC_text);
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+
+.AEC_inputWrap input,
+.AEC_inputWrap select {
+    height: 55px;
+    padding: 0 16px 0 46px;
+}
+
+
+.AEC_textareaWrap textarea {
+    min-height: 160px;
+
+    padding:
+        17px
+        17px
+        17px
+        46px;
+
+    resize: vertical;
+}
+
+
+.AEC_inputWrap input:focus,
+.AEC_inputWrap select:focus,
+.AEC_textareaWrap textarea:focus {
+    border-color: var(--AEC_maroon);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(110, 24, 48, 0.07);
+}
+
+
+.AEC_characterCount {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 6px;
+
+    color: var(--AEC_muted);
+
+    font-size: 11px;
+}
+
+
+.AEC_submitArea {
+    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding-top: 5px;
+}
+
+
+.AEC_submitButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 55px;
+
+    padding: 0 25px;
+
+    border: 0;
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--AEC_maroon),
+            var(--AEC_deep)
+        );
+
+    color: #fffdf8;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 25px
+        rgba(66, 16, 31, 0.20);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.AEC_submitButton:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 16px 30px
+        rgba(66, 16, 31, 0.25);
+}
+
+
+.AEC_submitArea small {
+    color: var(--AEC_muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+.AEC_submitArea small i {
+    color: var(--AEC_maroon);
+    margin-right: 4px;
+}
+
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.AEC_alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    margin-top: 25px;
+    padding: 15px 17px;
+
+    border-radius: 15px;
+
+    font-size: 13px;
+}
+
+
+.AEC_alert > i {
+    margin-top: 2px;
+    font-size: 18px;
+}
+
+
+.AEC_alert strong,
+.AEC_alert span {
+    display: block;
+}
+
+
+.AEC_alert span {
+    margin-top: 3px;
+    line-height: 1.5;
+}
+
+
+.AEC_success {
+    border:
+        1px solid #cde4d4;
+
+    background: #f1faf4;
+    color: #245c38;
+}
+
+
+.AEC_error {
+    border:
+        1px solid #ead0d0;
+
+    background: #fff5f5;
+    color: #8a2630;
+}
+
+
+/* =========================================================
+   SUPPORT STRIP
+========================================================= */
+
+.AEC_supportSection {
+    padding: 0 0 90px;
+}
+
+
+.AEC_supportGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.AEC_supportCard {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 23px;
+
+    border:
+        1px solid var(--AEC_border);
+
+    border-radius: 20px;
+
+    background: var(--AEC_cream);
+}
+
+
+.AEC_supportIcon {
+    flex: 0 0 50px;
+
+    width: 50px;
+    height: 50px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 15px;
+
+    color: var(--AEC_maroon);
+
+    background: #fffdf8;
+}
+
+
+.AEC_supportCard strong,
+.AEC_supportCard span {
+    display: block;
+}
+
+
+.AEC_supportCard strong {
+    margin-bottom: 5px;
+}
+
+
+.AEC_supportCard span {
+    color: var(--AEC_muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .AEC_contactGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .AEC_supportGrid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .AEC_container {
+        width: min(100% - 24px, 1180px);
+    }
+
+    .AEC_hero {
+        min-height: auto;
+    }
+
+    .AEC_heroContent {
+        padding: 70px 0;
+    }
+
+    .AEC_hero p {
+        font-size: 15px;
+    }
+
+    .AEC_contactSection {
+        padding: 55px 0;
+    }
+
+    .AEC_infoCard,
+    .AEC_formCard {
+        padding: 25px;
+        border-radius: 22px;
+    }
+
+    .AEC_form {
+        grid-template-columns: 1fr;
+    }
+
+    .AEC_full {
+        grid-column: auto;
+    }
+
+    .AEC_submitArea {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .AEC_submitButton {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .AEC_contactPage *,
+    .AEC_contactPage *::before,
+    .AEC_contactPage *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+/* =========================================================
+   CHARACTER COUNTER
+========================================================= */
+
+const AEC_message =
+    document.getElementById("message");
+
+const AEC_counter =
+    document.getElementById("messageCount");
+
+
+function AEC_updateCounter() {
+
+    if (!AEC_message || !AEC_counter) {
+        return;
+    }
+
+    AEC_counter.textContent =
+        AEC_message.value.length;
+
+}
+
+
+if (AEC_message) {
+
+    AEC_message.addEventListener(
+        "input",
+        AEC_updateCounter
+    );
+
+    AEC_updateCounter();
+
+}
+
+
+/* =========================================================
+   FORM LOADING STATE
+========================================================= */
+
+const AEC_form =
+    document.getElementById("contactForm");
+
+const AEC_submit =
+    document.getElementById("submitButton");
+
+
+if (AEC_form && AEC_submit) {
+
+    AEC_form.addEventListener(
+        "submit",
+        function () {
+
+            AEC_submit.disabled = true;
+
+            AEC_submit.querySelector(
+                "span"
+            ).textContent = "Sending...";
+
+            AEC_submit.querySelector(
+                "i"
+            ).className =
+                "fa-solid fa-spinner fa-spin";
+
+        }
+    );
+
+}
+
+</script>
+
+
+<?php include "footer.php"; ?>
