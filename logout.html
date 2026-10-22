@@ -1,0 +1,34 @@
+<?php
+/* ============================================================
+   AWAISI EMPORIUM — LOGOUT
+   Clears the admin session and returns to the home page.
+============================================================ */
+
+session_start();
+
+/* Remove all session values. */
+$_SESSION = [];
+
+/* Remove the session cookie when cookies are being used. */
+if (ini_get("session.use_cookies")) {
+
+    $params = session_get_cookie_params();
+
+    setcookie(
+        session_name(),
+        "",
+        time() - 42000,
+        $params["path"],
+        $params["domain"],
+        $params["secure"],
+        $params["httponly"]
+    );
+}
+
+/* Destroy the session. */
+session_destroy();
+
+/* Return to the public home page. */
+header("Location: index.php");
+exit;
+?>
