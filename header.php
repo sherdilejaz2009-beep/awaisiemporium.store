@@ -1,0 +1,1147 @@
+<?php
+$current_page = basename($_SERVER['PHP_SELF']);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Awaisi Emporium</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- google fonts -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+
+        :root {
+            --maroon: #6e1830;
+            --deep-maroon: #42101f;
+            --dark-maroon: #260611;
+
+            --gold: #d8b56a;
+            --gold-light: #f2dca5;
+
+            --ivory: #fffdf8;
+            --cream: #f5ecdf;
+
+            --text-dark: #321923;
+            --text-soft: #694650;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--ivory);
+            color: var(--text-dark);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        /* TOP BAR */
+
+        .top-announcement {
+            width: 100%;
+            min-height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 15px;
+            background:
+                linear-gradient(
+                    90deg,
+                    #25050f,
+                    #42101f,
+                    #6e1830,
+                    #42101f,
+                    #25050f
+                );
+            border-bottom: 1px solid rgba(216, 181, 106, 0.35);
+            color: #f8e8c7;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .top-announcement span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 11px;
+        }
+
+        .top-announcement i {
+            color: var(--gold-light);
+            font-size: 9px;
+        }
+
+        /* HEADER */
+
+        .site-header {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 17px 4.5%;
+            background:
+                radial-gradient(
+                    circle at 10% 50%,
+                    rgba(110, 24, 48, 0.10),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 90% 50%,
+                    rgba(216, 181, 106, 0.13),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fffdf8,
+                    #f8f0e5,
+                    #fffdf8
+                );
+            border-bottom: 1px solid rgba(110, 24, 48, 0.13);
+            box-shadow: 0 5px 25px rgba(66, 16, 31, 0.07);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            transition: 0.4s ease;
+        }
+
+        .site-header.scrolled {
+            padding-top: 11px;
+            padding-bottom: 11px;
+            background:
+                linear-gradient(
+                    110deg,
+                    #260611,
+                    #42101f,
+                    #350916
+                );
+            border-bottom: 1px solid rgba(216, 181, 106, 0.30);
+            box-shadow: 0 14px 40px rgba(38, 6, 17, 0.25);
+        }
+
+        .header-container {
+            width: 100%;
+            max-width: 1500px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        /* BRAND */
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            min-width: max-content;
+        }
+
+        .brand-logo {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: relative;
+            background:
+                linear-gradient(
+                    145deg,
+                    #7d2340,
+                    #42101f
+                );
+            border: 1.5px solid var(--gold);
+            color: var(--gold-light);
+            font-family: "Playfair Display", serif;
+            font-size: 21px;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            box-shadow:
+                0 8px 25px rgba(66, 16, 31, 0.20),
+                inset 0 1px 0 rgba(255, 255, 255, 0.20);
+            transition: 0.4s ease;
+        }
+
+        .brand-logo::after {
+            content: "";
+            position: absolute;
+            inset: 5px;
+            border: 1px solid rgba(242, 220, 165, 0.45);
+            border-radius: 50%;
+        }
+
+        .brand:hover .brand-logo {
+            transform: translateY(-2px) rotate(-4deg);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-text h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 23px;
+            line-height: 1;
+            color: var(--maroon);
+            font-weight: 700;
+            transition: 0.4s ease;
+        }
+
+        .brand-text span {
+            margin-top: 6px;
+            color: #98713c;
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 2.7px;
+            text-transform: uppercase;
+            transition: 0.4s ease;
+        }
+
+        .site-header.scrolled .brand-text h2 {
+            color: var(--ivory);
+        }
+
+        .site-header.scrolled .brand-text span {
+            color: var(--gold-light);
+        }
+
+        /* NAVIGATION */
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            padding: 7px;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(110, 24, 48, 0.10),
+                    rgba(216, 181, 106, 0.18),
+                    rgba(110, 24, 48, 0.08)
+                );
+            border: 1px solid rgba(110, 24, 48, 0.18);
+            border-radius: 50px;
+            box-shadow:
+                0 8px 28px rgba(66, 16, 31, 0.09),
+                inset 0 1px 0 rgba(255, 255, 255, 0.75);
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .main-nav > .nav-item > a {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            position: relative;
+            padding: 10px 15px;
+            border-radius: 30px;
+            color: #5c3945;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: 0.3s ease;
+        }
+
+        .main-nav > .nav-item > a i {
+            font-size: 9px;
+            transition: 0.3s ease;
+        }
+
+        .main-nav > .nav-item:hover > a i {
+            transform: rotate(180deg);
+        }
+
+        .main-nav > .nav-item > a:hover,
+        .main-nav > .nav-item > a.active {
+            color: var(--maroon);
+            background:
+                linear-gradient(
+                    135deg,
+                    #fffdf8,
+                    #f4e8d7
+                );
+            box-shadow: 0 5px 15px rgba(66, 16, 31, 0.10);
+        }
+
+        .site-header.scrolled .main-nav {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 255, 255, 0.06),
+                    rgba(216, 181, 106, 0.13),
+                    rgba(255, 255, 255, 0.05)
+                );
+            border-color: rgba(216, 181, 106, 0.32);
+        }
+
+        .site-header.scrolled .main-nav > .nav-item > a {
+            color: #f8eee3;
+        }
+
+        .site-header.scrolled .main-nav > .nav-item > a:hover,
+        .site-header.scrolled .main-nav > .nav-item > a.active {
+            color: var(--deep-maroon);
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--gold-light),
+                    var(--gold)
+                );
+        }
+
+        /* DROPDOWN */
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 14px);
+            left: 50%;
+            min-width: 235px;
+            padding: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(-50%, 12px);
+            background:
+                linear-gradient(
+                    145deg,
+                    #fffdf8,
+                    #f6ecdf
+                );
+            border: 1px solid rgba(110, 24, 48, 0.16);
+            border-radius: 18px;
+            box-shadow:
+                0 20px 45px rgba(66, 16, 31, 0.18),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            transition: 0.3s ease;
+            z-index: 1500;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, 0);
+        }
+
+        .dropdown-heading {
+            padding: 9px 12px 8px;
+            color: #98713c;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(110, 24, 48, 0.10);
+            margin-bottom: 5px;
+        }
+
+        .dropdown-link {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            width: 100%;
+            padding: 11px 12px;
+            border-radius: 10px;
+            color: var(--text-soft);
+            font-size: 12px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .dropdown-link i {
+            width: 18px;
+            color: var(--maroon);
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .dropdown-link span {
+            margin-left: auto;
+            color: #b49768;
+        }
+
+        .dropdown-link:hover {
+            color: var(--maroon);
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(110, 24, 48, 0.08),
+                    rgba(216, 181, 106, 0.18)
+                );
+            padding-left: 17px;
+        }
+
+        /* HEADER ICONS */
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .header-icon {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-radius: 50%;
+            background:
+                linear-gradient(
+                    145deg,
+                    #fffdf9,
+                    #f2e7d8
+                );
+            border: 1px solid rgba(110, 24, 48, 0.15);
+            color: var(--maroon);
+            font-size: 15px;
+            box-shadow: 0 6px 18px rgba(66, 16, 31, 0.08);
+            transition: 0.35s ease;
+        }
+
+        .header-icon:hover {
+            transform: translateY(-3px);
+            background: var(--maroon);
+            color: var(--gold-light);
+            border-color: var(--maroon);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -4px;
+            min-width: 19px;
+            height: 19px;
+            padding: 0 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--gold-light),
+                    var(--gold)
+                );
+            color: var(--deep-maroon);
+            border: 2px solid var(--ivory);
+            font-size: 9px;
+            font-weight: 800;
+        }
+
+        .site-header.scrolled .header-icon {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(216, 181, 106, 0.30);
+            color: var(--ivory);
+        }
+
+        .site-header.scrolled .header-icon:hover {
+            background: var(--gold);
+            color: var(--deep-maroon);
+        }
+
+        .site-header.scrolled .cart-count {
+            border-color: var(--deep-maroon);
+        }
+
+        /* MOBILE BUTTON */
+
+        .menu-toggle {
+            width: 44px;
+            height: 44px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background:
+                linear-gradient(
+                    145deg,
+                    #fffdf9,
+                    #f2e7d8
+                );
+            border: 1px solid rgba(110, 24, 48, 0.15);
+            color: var(--maroon);
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .site-header.scrolled .menu-toggle {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(216, 181, 106, 0.30);
+            color: var(--ivory);
+        }
+
+        /* TABLET */
+
+        @media (max-width: 1180px) {
+
+            .header-container {
+                gap: 12px;
+            }
+
+            .brand-text h2 {
+                font-size: 20px;
+            }
+
+            .main-nav {
+                gap: 2px;
+            }
+
+            .main-nav > .nav-item > a {
+                padding: 9px 10px;
+                font-size: 11px;
+            }
+
+            .header-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .site-header {
+                padding: 13px 5%;
+            }
+
+            .site-header.scrolled {
+                padding: 10px 5%;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .main-nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                max-height: calc(100vh - 80px);
+                overflow-y: auto;
+                padding: 20px 5% 28px;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 6px;
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+                background:
+                    linear-gradient(
+                        135deg,
+                        #fffdf8,
+                        #f5ecdf
+                    );
+                box-shadow: 0 20px 40px rgba(66, 16, 31, 0.13);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-12px);
+                transition: 0.3s ease;
+            }
+
+            .main-nav.show {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .main-nav > .nav-item {
+                width: 100%;
+            }
+
+            .main-nav > .nav-item > a {
+                width: 100%;
+                justify-content: space-between;
+                padding: 14px 16px;
+                border-radius: 12px;
+                font-size: 13px;
+            }
+
+            .dropdown-menu {
+                position: static;
+                width: 100%;
+                min-width: 0;
+                padding: 7px;
+                margin-top: 3px;
+                display: none;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                border-radius: 13px;
+                box-shadow: none;
+                background: rgba(110, 24, 48, 0.045);
+            }
+
+            .nav-item.dropdown-open .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-heading {
+                display: none;
+            }
+
+            .dropdown-link {
+                padding: 11px 13px;
+            }
+
+            .site-header.scrolled .main-nav {
+                background:
+                    linear-gradient(
+                        135deg,
+                        #42101f,
+                        #260611
+                    );
+            }
+
+            .site-header.scrolled .main-nav > .nav-item > a {
+                color: #f9eee3;
+            }
+
+            .site-header.scrolled .main-nav > .nav-item > a:hover,
+            .site-header.scrolled .main-nav > .nav-item > a.active {
+                color: var(--deep-maroon);
+                background:
+                    linear-gradient(
+                        135deg,
+                        var(--gold-light),
+                        var(--gold)
+                    );
+            }
+
+            .brand-logo {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+
+            .brand-text h2 {
+                font-size: 19px;
+            }
+
+            .brand-text span {
+                font-size: 7px;
+                letter-spacing: 2px;
+            }
+
+        }
+
+        /* SMALL MOBILE */
+
+        @media (max-width: 520px) {
+
+            .top-announcement {
+                font-size: 7px;
+                letter-spacing: 1px;
+            }
+
+            .header-container {
+                gap: 8px;
+            }
+
+            .brand {
+                gap: 9px;
+            }
+
+            .brand-logo {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .brand-text h2 {
+                font-size: 16px;
+            }
+
+            .brand-text span {
+                font-size: 6px;
+                letter-spacing: 1.2px;
+            }
+
+            .header-actions {
+                gap: 5px;
+            }
+
+            .header-icon,
+            .menu-toggle {
+                width: 37px;
+                height: 37px;
+                font-size: 13px;
+            }
+
+            .cart-count {
+                min-width: 17px;
+                height: 17px;
+                font-size: 8px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- TOP ANNOUNCEMENT -->
+
+    <div class="top-announcement">
+        <span>
+            <i class="fa-solid fa-sparkles"></i>
+            Discover Something Special — Premium Family Shopping
+            <i class="fa-solid fa-sparkles"></i>
+        </span>
+    </div>
+
+    <!-- HEADER -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="header-container">
+
+            <!-- BRAND -->
+
+            <a href="/awaisiempro/index.php" class="brand">
+
+                <div class="brand-logo">
+                    AE
+                </div>
+
+                <div class="brand-text">
+                    <h2>Awaisi Emporium</h2>
+                    <span>Premium Family Store</span>
+                </div>
+
+            </a>
+
+            <!-- NAVIGATION -->
+
+            <nav class="main-nav" id="mainNav">
+
+                <!-- HOME -->
+
+                <div class="nav-item">
+                    <a
+                        href="/awaisiempo/index.php"
+                        class="<?php echo ($current_page == 'index.php') ? 'active' : ''; ?>"
+                    >
+                        Home
+                    </a>
+                </div>
+
+                <!-- ABOUT -->
+
+                <div class="nav-item">
+                    <a
+                        href="/awaisiempo/about.php"
+                        class="<?php echo ($current_page == 'about.php') ? 'active' : ''; ?>"
+                    >
+                        About Us
+                    </a>
+                </div>
+
+                <!-- PRODUCTS -->
+
+                <div class="nav-item">
+
+                    <a
+                        href="/awaisiempo/products.php"
+                        class="<?php echo ($current_page == 'products.php') ? 'active' : ''; ?>"
+                    >
+                        Products
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <div class="dropdown-heading">
+                            Explore Products
+                        </div>
+
+                        <a
+                            href="/awaisiempo/products.php?category=cosmetics"
+                            class="dropdown-link"
+                        >
+                            <i class="fa-solid fa-sparkles"></i>
+                            Cosmetics
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="/awaisiempo/products.php?category=baby-wipes"
+                            class="dropdown-link"
+                        >
+                            
+                          Accessories
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="/awaisiempo/products.php?category=perfumes"
+                            class="dropdown-link"
+                        >
+                            <i class="fa-solid fa-spray-can-sparkles"></i>
+                            Perfumes
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- CATEGORIES -->
+
+                <div class="nav-item">
+
+                    <a
+                        href="/awaisiempo/categories.php"
+                        class="<?php echo ($current_page == 'categories.php') ? 'active' : ''; ?>"
+                    >
+                        Categories
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <div class="dropdown-heading">
+                            Shop By Category
+                        </div>
+
+                        <a
+                            href="/awaisiempo/categories.php?category=toys"
+                            class="dropdown-link"
+                        >
+                            <i class="fa-solid fa-gamepad"></i>
+                            Toys
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="/awaisiempo/categories.php?category=stuff-toys"
+                            class="dropdown-link"
+                        >
+                            <i class="fa-solid fa-paw"></i>
+                            Stuff Toys
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="/awaisiempo/categories.php?category=electric-cars"
+                            class="dropdown-link"
+                        >
+                            <i class="fa-solid fa-car-side"></i>
+                            Electric Cars
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="/awaisiempo/categories.php?category=school-picnic-bags"
+                            class="dropdown-link"
+                        >
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            School & Picnic Bags
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="/awaisiempo/categories.php?category=crockery"
+                            class="dropdown-link"
+                        >
+                            <i class="fa-solid fa-mug-hot"></i>
+                            Crockery
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- SETTINGS -->
+
+                <div class="nav-item">
+
+                    <a
+                        href="/awaisiempo/settings.php"
+                        class="<?php echo ($current_page == 'settings.php') ? 'active' : ''; ?>"
+                    >
+                        Settings
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <div class="dropdown-heading">
+                            Store Settings
+                        </div>
+
+                        <a
+                            href="/awaisiempo/settings.php"
+                            class="dropdown-link"
+                        >
+                            <i class="fa-solid fa-gear"></i>
+                            General Settings
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="/awaisiempo/privacy-policy.php"
+                            class="dropdown-link"
+                        >
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Privacy Policy
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="/awaisiempo/contact.php"
+                            class="dropdown-link"
+                        >
+                            <i class="fa-solid fa-headset"></i>
+                            Help & Support
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- CONTACT -->
+
+                <div class="nav-item">
+                    <a
+                        href="/awaisiempo/contact.php"
+                        class="<?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>"
+                    >
+                        Contact
+                    </a>
+                </div>
+
+            </nav>
+
+            <!-- HEADER ACTIONS -->
+
+            <div class="header-actions">
+
+                <!-- CART ICON - CORRECT LINK -->
+<!-- CART ICON -->
+
+<a
+    href="/awaisiempo/cart.php"
+    class="header-icon"
+    aria-label="Shopping Cart"
+    title="Shopping Cart"
+>
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span class="cart-count">0</span>
+</a>
+                <!-- LOGIN ICON - CORRECT LINK -->
+
+               <!-- LOGIN ICON -->
+
+<a
+    href="/awaisiempo/login.php"
+    class="header-icon"
+    aria-label="Admin Login"
+    title="Admin Login"
+>
+    <i class="fa-regular fa-user"></i>
+</a>
+                <!-- MOBILE MENU -->
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open Menu"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <script>
+
+        /* SCROLL HEADER */
+
+        const siteHeader = document.getElementById("siteHeader");
+
+        function updateHeader() {
+            if (window.scrollY > 30) {
+                siteHeader.classList.add("scrolled");
+            } else {
+                siteHeader.classList.remove("scrolled");
+            }
+        }
+
+        window.addEventListener("scroll", updateHeader);
+        updateHeader();
+
+
+        /* MOBILE MENU */
+
+        const menuToggle = document.getElementById("menuToggle");
+        const mainNav = document.getElementById("mainNav");
+
+        menuToggle.addEventListener("click", function () {
+
+            mainNav.classList.toggle("show");
+
+            const isOpen = mainNav.classList.contains("show");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+
+            const icon = menuToggle.querySelector("i");
+
+            if (isOpen) {
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
+            } else {
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+            }
+
+        });
+
+
+        /* MOBILE DROPDOWNS */
+
+        const dropdownItems = document.querySelectorAll(
+            ".main-nav > .nav-item"
+        );
+
+        dropdownItems.forEach(function (item) {
+
+            const dropdown = item.querySelector(".dropdown-menu");
+            const parentLink = item.querySelector(":scope > a");
+
+            if (dropdown && parentLink) {
+
+                parentLink.addEventListener("click", function (event) {
+
+                    if (window.innerWidth <= 900) {
+
+                        const isOpen = item.classList.contains("dropdown-open");
+
+                        if (!isOpen) {
+
+                            event.preventDefault();
+
+                            dropdownItems.forEach(function (otherItem) {
+                                otherItem.classList.remove("dropdown-open");
+                            });
+
+                            item.classList.add("dropdown-open");
+
+                        }
+
+                    }
+
+                });
+
+            }
+
+        });
+
+
+        /* CLOSE MOBILE MENU AFTER NORMAL LINK */
+
+        const allNavLinks = mainNav.querySelectorAll("a");
+
+        allNavLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                const hasDropdown = link.parentElement.querySelector(
+                    ".dropdown-menu"
+                );
+
+                if (window.innerWidth <= 900 && !hasDropdown) {
+
+                    mainNav.classList.remove("show");
+                    menuToggle.setAttribute("aria-expanded", "false");
+
+                    const icon = menuToggle.querySelector("i");
+
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+
+                }
+
+            });
+
+        });
+
+
+        /* RESET ON DESKTOP */
+
+        window.addEventListener("resize", function () {
+
+            if (window.innerWidth > 900) {
+
+                mainNav.classList.remove("show");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+                const icon = menuToggle.querySelector("i");
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+
+                dropdownItems.forEach(function (item) {
+                    item.classList.remove("dropdown-open");
+                });
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

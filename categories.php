@@ -1,0 +1,2096 @@
+<?php
+/* =========================================================
+   AWAISI EMPORIUM
+   categories.php
+   ========================================================= */
+
+session_start();
+
+
+/* =========================================================
+   CHANGE HERE — CATEGORY & PRODUCT DATA
+
+   Yahan se aap:
+   - Category name change kar sakte hain
+   - Category subtitle change kar sakte hain
+   - Icon change kar sakte hain
+   - Product name change kar sakte hain
+   - Description change kar sakte hain
+   - Price change kar sakte hain
+   - Image path add/change kar sakte hain
+
+   Example image:
+   "image" => "uploads/toy.jpg"
+   ========================================================= */
+
+$categories = [
+
+    /* =====================================================
+       1. TOYS
+       ===================================================== */
+
+    [
+        "id" => "toys",
+        "title" => "Toys",
+        "subtitle" => "Fun, creativity & joyful play",
+        "icon" => "fa-puzzle-piece",
+
+        "products" => [
+
+            [
+                "name" => "Premium Kids Toy Set",
+                "description" => "A colorful and entertaining toy set for kids.",
+                "price" => "2,499",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Creative Building Set",
+                "description" => "A creative building set designed for fun learning.",
+                "price" => "1,899",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Kids Learning Toy",
+                "description" => "An engaging toy designed for playful learning.",
+                "price" => "1,599",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Colorful Play Set",
+                "description" => "A beautiful play set for everyday entertainment.",
+                "price" => "2,199",
+                "image" => ""
+            ]
+
+        ]
+    ],
+
+
+    /* =====================================================
+       2. STUFF TOYS
+       ===================================================== */
+
+    [
+        "id" => "stuff-toys",
+        "title" => "Stuff Toys",
+        "subtitle" => "Soft, cute & lovely companions",
+        "icon" => "fa-heart",
+
+        "products" => [
+
+            [
+                "name" => "Cute Teddy Bear",
+                "description" => "A soft and adorable teddy bear for kids.",
+                "price" => "1,999",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Premium Soft Bunny",
+                "description" => "A soft bunny toy with a cute premium look.",
+                "price" => "1,799",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Lovely Cartoon Bear",
+                "description" => "A colorful and soft cartoon-style stuffed toy.",
+                "price" => "1,499",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Fluffy Elephant",
+                "description" => "A soft fluffy elephant designed for little ones.",
+                "price" => "2,299",
+                "image" => ""
+            ]
+
+        ]
+    ],
+
+
+    /* =====================================================
+       3. ELECTRIC CARS
+       ===================================================== */
+
+    [
+        "id" => "electric-cars",
+        "title" => "Electric Cars",
+        "subtitle" => "Premium rides for little drivers",
+        "icon" => "fa-car-side",
+
+        "products" => [
+
+            [
+                "name" => "Luxury Kids Electric Car",
+                "description" => "A stylish electric ride designed for kids.",
+                "price" => "39,999",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Mini Sports Electric Car",
+                "description" => "A sporty electric car with a premium appearance.",
+                "price" => "34,999",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Kids SUV Electric Car",
+                "description" => "A mini SUV-style electric ride for children.",
+                "price" => "44,999",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Premium Ride-On Car",
+                "description" => "A beautiful ride-on electric car for kids.",
+                "price" => "42,999",
+                "image" => ""
+            ]
+
+        ]
+    ],
+
+
+    /* =====================================================
+       4. CROCKERY
+       ===================================================== */
+
+    [
+        "id" => "crockery",
+        "title" => "Crockery",
+        "subtitle" => "Elegant pieces for your home",
+        "icon" => "fa-mug-hot",
+
+        "products" => [
+
+            [
+                "name" => "Premium Dinner Set",
+                "description" => "An elegant dinner set for family dining.",
+                "price" => "5,999",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Elegant Tea Set",
+                "description" => "A stylish tea set for your dining table.",
+                "price" => "3,499",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Modern Serving Set",
+                "description" => "A modern serving set for beautiful presentations.",
+                "price" => "4,299",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Classic Kitchen Set",
+                "description" => "A practical and elegant crockery collection.",
+                "price" => "4,999",
+                "image" => ""
+            ]
+
+        ]
+    ],
+
+
+    /* =====================================================
+       5. SCHOOL BAGS
+       ===================================================== */
+
+    [
+        "id" => "school-bags",
+        "title" => "School Bags",
+        "subtitle" => "Smart, comfortable & stylish",
+        "icon" => "fa-school",
+
+        "products" => [
+
+            [
+                "name" => "Premium School Bag",
+                "description" => "A spacious and comfortable school backpack.",
+                "price" => "2,499",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Kids Cartoon School Bag",
+                "description" => "A colorful school bag with a fun design.",
+                "price" => "1,999",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Classic Student Backpack",
+                "description" => "A practical backpack for everyday school use.",
+                "price" => "2,299",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Premium Travel School Bag",
+                "description" => "A spacious bag suitable for school and travel.",
+                "price" => "2,799",
+                "image" => ""
+            ]
+
+        ]
+    ],
+
+
+    /* =====================================================
+       6. PICNIC BAGS
+       ===================================================== */
+
+    [
+        "id" => "picnic-bags",
+        "title" => "Picnic Bags",
+        "subtitle" => "Perfect companions for outdoor days",
+        "icon" => "fa-basket-shopping",
+
+        "products" => [
+
+            [
+                "name" => "Premium Picnic Bag",
+                "description" => "A spacious picnic bag for family outings.",
+                "price" => "2,799",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Insulated Picnic Bag",
+                "description" => "A practical insulated bag for outdoor meals.",
+                "price" => "3,299",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Family Picnic Bag",
+                "description" => "A large and comfortable bag for family picnics.",
+                "price" => "3,499",
+                "image" => ""
+            ],
+
+            [
+                "name" => "Compact Picnic Carrier",
+                "description" => "A compact carrier for short outdoor trips.",
+                "price" => "2,199",
+                "image" => ""
+            ]
+
+        ]
+    ]
+
+];
+
+
+/* =========================================================
+   HELPER FUNCTIONS
+   ========================================================= */
+
+function ae_escape($value)
+{
+    return htmlspecialchars(
+        (string) $value,
+        ENT_QUOTES,
+        'UTF-8'
+    );
+}
+
+
+function ae_image($image)
+{
+    if (!empty($image)) {
+        return $image;
+    }
+
+    return '';
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+include "header.php";
+
+?>
+
+
+<!-- =======================================================
+     PAGE START
+     ======================================================= -->
+
+<main class="AEC_page">
+
+
+    <!-- ===================================================
+         HERO SECTION
+         =================================================== -->
+
+    <section class="AEC_hero">
+
+        <div class="AEC_hero_content">
+
+            <span class="AEC_eyebrow">
+                AWAISI EMPORIUM
+            </span>
+
+            <h1>
+                Explore Our
+                <span>Categories</span>
+            </h1>
+
+            <p>
+                Discover toys, electric cars, crockery, school bags
+                and more — carefully selected for your everyday needs.
+            </p>
+
+            <a
+                href="#AEC_categories"
+                class="AEC_hero_button"
+            >
+                Explore Categories
+
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+
+        </div>
+
+
+        <!-- HERO DECORATION -->
+
+        <div class="AEC_hero_decoration">
+
+            <div class="AEC_circle AEC_circle_one"></div>
+
+            <div class="AEC_circle AEC_circle_two"></div>
+
+            <div class="AEC_hero_card">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <strong>
+                    <?php echo count($categories); ?>
+                </strong>
+
+                <span>
+                    Premium Categories
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         CATEGORY QUICK NAVIGATION
+         =================================================== -->
+
+    <section
+        class="AEC_category_navigation"
+        id="AEC_categories"
+    >
+
+        <div class="AEC_section_heading">
+
+            <span>
+                SHOP BY CATEGORY
+            </span>
+
+            <h2>
+                Find What You Need
+            </h2>
+
+            <p>
+                Select a category to explore its collection.
+            </p>
+
+        </div>
+
+
+        <!-- CATEGORY BUTTONS -->
+
+        <div class="AEC_category_buttons">
+
+            <?php foreach ($categories as $category): ?>
+
+                <a
+                    href="#<?php echo ae_escape($category['id']); ?>"
+                    class="AEC_category_button"
+                >
+
+                    <span class="AEC_button_icon">
+
+                        <i
+                            class="fa-solid <?php echo ae_escape($category['icon']); ?>"
+                        ></i>
+
+                    </span>
+
+                    <span>
+                        <?php echo ae_escape($category['title']); ?>
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            <?php endforeach; ?>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         ALL CATEGORY SECTIONS
+         =================================================== -->
+
+    <section class="AEC_all_categories">
+
+        <?php foreach ($categories as $category): ?>
+
+            <!-- ===========================================
+                 SINGLE CATEGORY
+                 =========================================== -->
+
+            <section
+                class="AEC_category_section"
+                id="<?php echo ae_escape($category['id']); ?>"
+            >
+
+
+                <!-- CATEGORY HEADER -->
+
+                <div class="AEC_category_header">
+
+
+                    <!-- CATEGORY TITLE -->
+
+                    <div class="AEC_category_title">
+
+                        <div class="AEC_category_icon">
+
+                            <i
+                                class="fa-solid <?php echo ae_escape($category['icon']); ?>"
+                            ></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                COLLECTION
+                            </span>
+
+                            <h2>
+                                <?php echo ae_escape($category['title']); ?>
+                            </h2>
+
+                            <p>
+                                <?php echo ae_escape($category['subtitle']); ?>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BACK BUTTON -->
+
+                    <a
+                        href="#AEC_categories"
+                        class="AEC_back_button"
+                    >
+
+                        <i class="fa-solid fa-arrow-up"></i>
+
+                        Back to Categories
+
+                    </a>
+
+                </div>
+
+
+                <!-- =======================================
+                     PRODUCT GRID
+                     ======================================= -->
+
+                <div class="AEC_product_grid">
+
+                    <?php foreach ($category['products'] as $index => $product): ?>
+
+                        <article class="AEC_product_card">
+
+
+                            <!-- PRODUCT IMAGE -->
+
+                            <div class="AEC_product_image">
+
+                                <?php if (!empty(ae_image($product['image']))): ?>
+
+                                    <img
+                                        src="<?php echo ae_escape($product['image']); ?>"
+                                        alt="<?php echo ae_escape($product['name']); ?>"
+                                    >
+
+                                <?php else: ?>
+
+                                    <div class="AEC_image_placeholder">
+
+                                        <i class="fa-regular fa-image"></i>
+
+                                        <span>
+                                            Add Product Image
+                                        </span>
+
+                                    </div>
+
+                                <?php endif; ?>
+
+
+                                <!-- PRODUCT NUMBER -->
+
+                                <div class="AEC_card_badge">
+
+                                    <?php
+                                    echo sprintf(
+                                        '%02d',
+                                        $index + 1
+                                    );
+                                    ?>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PRODUCT CONTENT -->
+
+                            <div class="AEC_product_content">
+
+
+                                <!-- CATEGORY NAME -->
+
+                                <span class="AEC_product_category">
+
+                                    <?php
+                                    echo ae_escape(
+                                        $category['title']
+                                    );
+                                    ?>
+
+                                </span>
+
+
+                                <!-- PRODUCT NAME -->
+
+                                <h3>
+
+                                    <?php
+                                    echo ae_escape(
+                                        $product['name']
+                                    );
+                                    ?>
+
+                                </h3>
+
+
+                                <!-- PRODUCT DESCRIPTION -->
+
+                                <p>
+
+                                    <?php
+                                    echo ae_escape(
+                                        $product['description']
+                                    );
+                                    ?>
+
+                                </p>
+
+
+                                <!-- PRICE + CART -->
+
+                                <div class="AEC_product_bottom">
+
+
+                                    <!-- PRICE -->
+
+                                    <div class="AEC_price">
+
+                                        <small>
+                                            PKR
+                                        </small>
+
+                                        <strong>
+
+                                            <?php
+                                            echo ae_escape(
+                                                $product['price']
+                                            );
+                                            ?>
+
+                                        </strong>
+
+                                    </div>
+
+
+                                    <!-- CART BUTTON -->
+
+                                    <a
+                                        href="cart.php"
+                                        class="AEC_cart_button"
+                                        title="Add to Cart"
+                                    >
+
+                                        <i class="fa-solid fa-cart-plus"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    <?php endforeach; ?>
+
+                </div>
+
+            </section>
+
+        <?php endforeach; ?>
+
+    </section>
+
+
+    <!-- ===================================================
+         BOTTOM CTA
+         =================================================== -->
+
+    <section class="AEC_bottom_cta">
+
+        <div>
+
+            <span>
+                AWAISI EMPORIUM
+            </span>
+
+            <h2>
+                Something Special Awaits You
+            </h2>
+
+            <p>
+                Explore our collections and discover products
+                selected for quality, style and everyday comfort.
+            </p>
+
+        </div>
+
+
+        <a href="#AEC_categories">
+
+            Explore Categories
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </section>
+
+
+</main>
+
+
+<!-- =======================================================
+     CSS
+     ======================================================= -->
+
+<style>
+
+/* =========================================================
+   CHANGE COLORS HERE
+   ========================================================= */
+
+:root {
+
+    --AEC_maroon: #6e1830;
+
+    --AEC_deep_maroon: #42101f;
+
+    --AEC_light_maroon: #8d304b;
+
+    --AEC_champagne: #d8b56a;
+
+    --AEC_soft_champagne: #ead39d;
+
+    --AEC_ivory: #fffdf8;
+
+    --AEC_cream: #f4ebdd;
+
+    --AEC_text: #321923;
+
+    --AEC_muted: #806a70;
+
+    --AEC_border: #eadbd0;
+
+    --AEC_white: #ffffff;
+
+    --AEC_shadow:
+        0 20px 60px rgba(66, 16, 31, 0.10);
+
+}
+
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
+
+.AEC_page {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--AEC_ivory) 0%,
+            #fffaf4 50%,
+            var(--AEC_cream) 100%
+        );
+
+    color: var(--AEC_text);
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.AEC_hero {
+
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 90px 7%;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(216, 181, 106, 0.24),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #fffdf8,
+            #f4ebdd
+        );
+
+    border-bottom:
+        1px solid var(--AEC_border);
+
+}
+
+
+.AEC_hero_content {
+
+    max-width: 680px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* =========================================================
+   HERO EYEBROW
+   ========================================================= */
+
+.AEC_eyebrow {
+
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(110, 24, 48, 0.08);
+
+    border:
+        1px solid rgba(110, 24, 48, 0.15);
+
+    color:
+        var(--AEC_maroon);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.AEC_hero h1 {
+
+    margin: 0;
+
+    font-size:
+        clamp(42px, 6vw, 76px);
+
+    line-height: 1.02;
+
+    letter-spacing: -2px;
+
+}
+
+
+.AEC_hero h1 span {
+
+    display: block;
+
+    color:
+        var(--AEC_maroon);
+
+}
+
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
+
+.AEC_hero p {
+
+    max-width: 610px;
+
+    margin: 25px 0 30px;
+
+    color:
+        var(--AEC_muted);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   HERO BUTTON
+   ========================================================= */
+
+.AEC_hero_button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 22px;
+
+    border-radius: 12px;
+
+    background:
+        var(--AEC_maroon);
+
+    color:
+        var(--AEC_white);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.AEC_hero_button:hover {
+
+    background:
+        var(--AEC_deep_maroon);
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =========================================================
+   HERO DECORATION
+   ========================================================= */
+
+.AEC_hero_decoration {
+
+    width: 350px;
+
+    height: 350px;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+}
+
+
+.AEC_circle {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+}
+
+
+.AEC_circle_one {
+
+    width: 280px;
+
+    height: 280px;
+
+    right: 20px;
+
+    top: 25px;
+
+    background:
+        rgba(110, 24, 48, 0.08);
+
+    border:
+        1px solid rgba(110, 24, 48, 0.15);
+
+}
+
+
+.AEC_circle_two {
+
+    width: 210px;
+
+    height: 210px;
+
+    right: 55px;
+
+    top: 60px;
+
+    border:
+        1px solid var(--AEC_champagne);
+
+}
+
+
+/* =========================================================
+   HERO CARD
+   ========================================================= */
+
+.AEC_hero_card {
+
+    position: absolute;
+
+    width: 190px;
+
+    padding: 25px;
+
+    left: 35px;
+
+    bottom: 35px;
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    backdrop-filter:
+        blur(15px);
+
+    border:
+        1px solid var(--AEC_border);
+
+    border-radius: 22px;
+
+    box-shadow:
+        var(--AEC_shadow);
+
+    text-align: center;
+
+}
+
+
+.AEC_hero_card i {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 25px;
+
+    color:
+        var(--AEC_maroon);
+
+}
+
+
+.AEC_hero_card strong {
+
+    display: block;
+
+    font-size: 38px;
+
+    color:
+        var(--AEC_maroon);
+
+}
+
+
+.AEC_hero_card span {
+
+    color:
+        var(--AEC_muted);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   CATEGORY NAVIGATION
+   ========================================================= */
+
+.AEC_category_navigation {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding:
+        90px 7% 55px;
+
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.AEC_section_heading {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.AEC_section_heading span {
+
+    color:
+        var(--AEC_maroon);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.AEC_section_heading h2 {
+
+    margin: 10px 0;
+
+    font-size:
+        clamp(32px, 4vw, 48px);
+
+}
+
+
+.AEC_section_heading p {
+
+    margin: 0;
+
+    color:
+        var(--AEC_muted);
+
+}
+
+
+/* =========================================================
+   CATEGORY BUTTONS
+   ========================================================= */
+
+.AEC_category_buttons {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.AEC_category_button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 16px;
+
+    border:
+        1px solid var(--AEC_border);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.75);
+
+    color:
+        var(--AEC_text);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 35px rgba(66, 16, 31, 0.05);
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.AEC_category_button:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        var(--AEC_champagne);
+
+    color:
+        var(--AEC_maroon);
+
+}
+
+
+.AEC_button_icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    background:
+        var(--AEC_cream);
+
+    color:
+        var(--AEC_maroon);
+
+}
+
+
+.AEC_category_button > i {
+
+    margin-left: auto;
+
+    color:
+        var(--AEC_champagne);
+
+}
+
+
+/* =========================================================
+   ALL CATEGORIES
+   ========================================================= */
+
+.AEC_all_categories {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding:
+        20px 7% 80px;
+
+}
+
+
+.AEC_category_section {
+
+    scroll-margin-top: 100px;
+
+    padding:
+        65px 0;
+
+    border-top:
+        1px solid var(--AEC_border);
+
+}
+
+
+/* =========================================================
+   CATEGORY HEADER
+   ========================================================= */
+
+.AEC_category_header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.AEC_category_title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.AEC_category_icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 18px;
+
+    background:
+        var(--AEC_maroon);
+
+    color:
+        var(--AEC_champagne);
+
+    font-size: 23px;
+
+    box-shadow:
+        0 12px 30px rgba(110, 24, 48, 0.18);
+
+}
+
+
+.AEC_category_title span {
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color:
+        var(--AEC_champagne);
+
+}
+
+
+.AEC_category_title h2 {
+
+    margin: 4px 0;
+
+    font-size: 34px;
+
+}
+
+
+.AEC_category_title p {
+
+    margin: 0;
+
+    color:
+        var(--AEC_muted);
+
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.AEC_back_button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color:
+        var(--AEC_maroon);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+
+.AEC_product_grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
+
+.AEC_product_card {
+
+    overflow: hidden;
+
+    background:
+        var(--AEC_white);
+
+    border:
+        1px solid var(--AEC_border);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px rgba(66, 16, 31, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.AEC_product_card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 22px 55px rgba(66, 16, 31, 0.13);
+
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+   ========================================================= */
+
+.AEC_product_image {
+
+    height: 245px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f4ebdd,
+            #fffdf8
+        );
+
+}
+
+
+.AEC_product_image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+
+.AEC_product_card:hover
+.AEC_product_image img {
+
+    transform:
+        scale(1.06);
+
+}
+
+
+/* =========================================================
+   IMAGE PLACEHOLDER
+   ========================================================= */
+
+.AEC_image_placeholder {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    color:
+        var(--AEC_maroon);
+
+}
+
+
+.AEC_image_placeholder i {
+
+    font-size: 42px;
+
+    opacity: 0.35;
+
+}
+
+
+.AEC_image_placeholder span {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    opacity: 0.6;
+
+}
+
+
+/* =========================================================
+   PRODUCT NUMBER BADGE
+   ========================================================= */
+
+.AEC_card_badge {
+
+    position: absolute;
+
+    top: 14px;
+
+    left: 14px;
+
+    width: 38px;
+
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    color:
+        var(--AEC_maroon);
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =========================================================
+   PRODUCT CONTENT
+   ========================================================= */
+
+.AEC_product_content {
+
+    padding: 21px;
+
+}
+
+
+/* =========================================================
+   PRODUCT CATEGORY
+   ========================================================= */
+
+.AEC_product_category {
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color:
+        var(--AEC_champagne);
+
+}
+
+
+/* =========================================================
+   PRODUCT NAME
+   ========================================================= */
+
+.AEC_product_content h3 {
+
+    margin: 8px 0;
+
+    font-size: 19px;
+
+}
+
+
+/* =========================================================
+   PRODUCT DESCRIPTION
+   ========================================================= */
+
+.AEC_product_content p {
+
+    min-height: 45px;
+
+    margin:
+        0 0 18px;
+
+    color:
+        var(--AEC_muted);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   PRICE + CART AREA
+   ========================================================= */
+
+.AEC_product_bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-top: 15px;
+
+    border-top:
+        1px solid var(--AEC_border);
+
+}
+
+
+/* =========================================================
+   PRICE
+   ========================================================= */
+
+.AEC_price small {
+
+    display: block;
+
+    color:
+        var(--AEC_muted);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.AEC_price strong {
+
+    color:
+        var(--AEC_maroon);
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================================
+   CART BUTTON
+   ========================================================= */
+
+.AEC_cart_button {
+
+    width: 43px;
+
+    height: 43px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    background:
+        var(--AEC_maroon);
+
+    color:
+        var(--AEC_white);
+
+    text-decoration: none;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.AEC_cart_button:hover {
+
+    background:
+        var(--AEC_deep_maroon);
+
+    transform:
+        scale(1.08);
+
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+   ========================================================= */
+
+.AEC_bottom_cta {
+
+    max-width: 1400px;
+
+    margin:
+        20px auto 80px;
+
+    padding:
+        50px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--AEC_maroon),
+            var(--AEC_deep_maroon)
+        );
+
+    color:
+        var(--AEC_white);
+
+}
+
+
+.AEC_bottom_cta span {
+
+    color:
+        var(--AEC_champagne);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.AEC_bottom_cta h2 {
+
+    margin: 8px 0;
+
+    font-size: 32px;
+
+}
+
+
+.AEC_bottom_cta p {
+
+    max-width: 600px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    line-height: 1.7;
+
+}
+
+
+.AEC_bottom_cta > a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 20px;
+
+    border-radius: 12px;
+
+    background:
+        var(--AEC_champagne);
+
+    color:
+        var(--AEC_deep_maroon);
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.AEC_bottom_cta > a:hover {
+
+    background:
+        var(--AEC_soft_champagne);
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =========================================================
+   TABLET RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .AEC_hero {
+
+        padding:
+            75px 5%;
+
+    }
+
+
+    .AEC_product_grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .AEC_category_buttons {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .AEC_hero {
+
+        min-height: auto;
+
+        padding:
+            60px 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .AEC_hero h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .AEC_hero_decoration {
+
+        width: 100%;
+
+        height: 270px;
+
+    }
+
+
+    .AEC_category_navigation {
+
+        padding:
+            65px 20px 35px;
+
+    }
+
+
+    .AEC_category_buttons {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .AEC_all_categories {
+
+        padding:
+            10px 20px 60px;
+
+    }
+
+
+    .AEC_category_header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .AEC_category_title h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .AEC_product_grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .AEC_product_image {
+
+        height: 270px;
+
+    }
+
+
+    .AEC_bottom_cta {
+
+        margin:
+            10px 20px 50px;
+
+        padding:
+            35px 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .AEC_bottom_cta h2 {
+
+        font-size: 27px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .AEC_hero h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .AEC_category_title {
+
+        align-items: flex-start;
+
+    }
+
+
+    .AEC_category_icon {
+
+        width: 55px;
+
+        height: 55px;
+
+    }
+
+}
+
+</style>
+
+
+<!-- =======================================================
+     JAVASCRIPT
+     ======================================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* ================================================
+           SMOOTH CATEGORY SCROLL
+           ================================================ */
+
+        document
+            .querySelectorAll(
+                '.AEC_page a[href^="#"]'
+            )
+            .forEach(function (link) {
+
+
+                link.addEventListener(
+                    "click",
+                    function (event) {
+
+
+                        const targetId =
+                            this.getAttribute("href");
+
+
+                        const target =
+                            document.querySelector(targetId);
+
+
+                        if (!target) {
+
+                            return;
+
+                        }
+
+
+                        event.preventDefault();
+
+
+                        target.scrollIntoView({
+
+                            behavior: "smooth",
+
+                            block: "start"
+
+                        });
+
+                    }
+                );
+
+            });
+
+    }
+);
+
+</script>
+
+
+<?php
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+include "footer.php";
+
+?>

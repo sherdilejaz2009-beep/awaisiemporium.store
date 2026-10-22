@@ -1,2065 +1,1714 @@
-<?php
-/*
-|--------------------------------------------------------------------------
-| AWAISI EMPORIUM
-| ABOUT US PAGE
-|--------------------------------------------------------------------------
-*/
-
-include "header.php";
-?>
-
-<main class="AE_ABOUT">
-
-    <!-- ================= HERO ================= -->
-    <section class="AE_ABOUT_HERO">
-
-        <div class="AE_ABOUT_GLOW AE_ABOUT_GLOW_1"></div>
-        <div class="AE_ABOUT_GLOW AE_ABOUT_GLOW_2"></div>
-
-        <div class="AE_ABOUT_HERO_INNER">
-
-            <div class="AE_ABOUT_HERO_TEXT">
-
-                <div class="AE_ABOUT_EYEBROW">
-                    <span></span>
-                    OUR STORY
-                </div>
-
-                <h1>
-                    More Than
-                    <em>Shopping.</em>
-                </h1>
-
-                <p>
-                    Awaisi Emporium brings quality, variety and a
-                    beautiful shopping experience together for families,
-                    homes and everyday life.
-                </p>
-
-                <div class="AE_ABOUT_BUTTONS">
-
-                    <a href="products.php"
-                       class="AE_ABOUT_BTN AE_ABOUT_PRIMARY">
-                        Explore Products
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                    <a href="#story"
-                       class="AE_ABOUT_BTN AE_ABOUT_SECONDARY">
-                        Discover Our Story
-                        <i class="fa-solid fa-angle-down"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- PREMIUM AE VISUAL -->
-
-            <div class="AE_ABOUT_VISUAL">
-
-                <div class="AE_ABOUT_ORB">
-
-                    <div class="AE_ORB_RING AE_RING_1"></div>
-                    <div class="AE_ORB_RING AE_RING_2"></div>
-
-                    <div class="AE_ABOUT_SEAL">
-
-                        <strong>AE</strong>
-
-                        <span class="AE_SEAL_LINE"></span>
-
-                        <b>AWAISI</b>
-
-                        <small>EMPORIUM</small>
-
-                        <label>
-                            PREMIUM FAMILY STORE
-                        </label>
-
-                    </div>
-
-                </div>
-
-
-                <div class="AE_FLOAT_CARD AE_FLOAT_TOP">
-
-                    <div class="AE_FLOAT_ICON">
-                        <i class="fa-solid fa-shield-heart"></i>
-                    </div>
-
-                    <div>
-                        <strong>Quality First</strong>
-                        <span>Selected with care</span>
-                    </div>
-
-                </div>
-
-
-                <div class="AE_FLOAT_CARD AE_FLOAT_BOTTOM">
-
-                    <div class="AE_FLOAT_ICON">
-                        <i class="fa-solid fa-people-roof"></i>
-                    </div>
-
-                    <div>
-                        <strong>Family Focused</strong>
-                        <span>Made for everyday life</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= STORY ================= -->
-
-    <section class="AE_ABOUT_SECTION" id="story">
-
-        <div class="AE_ABOUT_CONTAINER AE_STORY_GRID">
-
-            <div class="AE_SECTION_NUMBER">
-                <strong>01</strong>
-                <span></span>
-                <small>THE BEGINNING</small>
-            </div>
-
-
-            <div class="AE_STORY_CONTENT">
-
-                <div class="AE_LABEL">
-                    WHO WE ARE
-                </div>
-
-                <h2>
-                    A store with
-                    <span>a purpose.</span>
-                </h2>
-
-                <p>
-                    Awaisi Emporium is built around a simple idea:
-                    everyday shopping should feel easy, trustworthy
-                    and enjoyable.
-                </p>
-
-                <p>
-                    Our goal is to bring different collections together
-                    in one convenient destination while keeping the
-                    shopping experience clean, modern and customer-focused.
-                </p>
-
-                <p>
-                    From products for children and families to useful
-                    everyday essentials, every collection has a place
-                    in the Awaisi Emporium experience.
-                </p>
-
-                <a href="contact.php" class="AE_TEXT_LINK">
-                    Talk To Us
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-
-            </div>
-
-
-            <div class="AE_STORY_QUOTE">
-
-                <div class="AE_QUOTE_MARK">
-                    “
-                </div>
-
-                <p>
-                    Quality should feel simple.
-                    Shopping should feel special.
-                </p>
-
-                <span>
-                    AWAISI EMPORIUM
-                </span>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= STATS ================= -->
-
-    <section class="AE_STATS">
-
-        <div class="AE_ABOUT_CONTAINER AE_STATS_GRID">
-
-            <div class="AE_STAT">
-                <strong>AE</strong>
-                <span>Our Identity</span>
-            </div>
-
-            <div class="AE_STAT">
-                <strong>07+</strong>
-                <span>Collections</span>
-            </div>
-
-            <div class="AE_STAT">
-                <strong>100%</strong>
-                <span>Customer Focus</span>
-            </div>
-
-            <div class="AE_STAT">
-                <strong>01</strong>
-                <span>Family Store</span>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= VALUES ================= -->
-
-    <section class="AE_ABOUT_SECTION AE_VALUES_SECTION">
-
-        <div class="AE_ABOUT_CONTAINER">
-
-            <div class="AE_CENTER_TITLE">
-
-                <div class="AE_LABEL">
-                    WHAT WE STAND FOR
-                </div>
-
-                <h2>
-                    Our
-                    <span>Values.</span>
-                </h2>
-
-                <p>
-                    The principles behind the Awaisi Emporium experience.
-                </p>
-
-            </div>
-
-
-            <div class="AE_VALUES_GRID">
-
-                <article class="AE_VALUE AE_VALUE_MAIN">
-
-                    <div class="AE_VALUE_TOP">
-                        <span>01</span>
-                        <i class="fa-solid fa-gem"></i>
-                    </div>
-
-                    <h3>Quality</h3>
-
-                    <p>
-                        Quality remains at the heart of the products
-                        and experience we want our customers to enjoy.
-                    </p>
-
-                    <div class="AE_VALUE_LINE"></div>
-
-                </article>
-
-
-                <article class="AE_VALUE">
-
-                    <div class="AE_VALUE_TOP">
-                        <span>02</span>
-                        <i class="fa-solid fa-layer-group"></i>
-                    </div>
-
-                    <h3>Variety</h3>
-
-                    <p>
-                        Different customers have different needs.
-                        Our collections give them more choices.
-                    </p>
-
-                    <div class="AE_VALUE_LINE"></div>
-
-                </article>
-
-
-                <article class="AE_VALUE">
-
-                    <div class="AE_VALUE_TOP">
-                        <span>03</span>
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <h3>Care</h3>
-
-                    <p>
-                        We want every customer to feel respected,
-                        supported and comfortable.
-                    </p>
-
-                    <div class="AE_VALUE_LINE"></div>
-
-                </article>
-
-
-                <article class="AE_VALUE">
-
-                    <div class="AE_VALUE_TOP">
-                        <span>04</span>
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
-
-                    <h3>Convenience</h3>
-
-                    <p>
-                        Simple navigation and a clear shopping journey
-                        make everyday shopping easier.
-                    </p>
-
-                    <div class="AE_VALUE_LINE"></div>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= COLLECTIONS ================= -->
-
-    <section class="AE_COLLECTIONS">
-
-        <div class="AE_ABOUT_CONTAINER">
-
-            <div class="AE_COLLECTION_HEAD">
-
-                <div>
-
-                    <div class="AE_LABEL">
-                        OUR WORLD
-                    </div>
-
-                    <h2>
-                        Made for
-                        <span>everyday moments.</span>
-                    </h2>
-
-                </div>
-
-                <a href="categories.php" class="AE_TEXT_LINK">
-                    View All Collections
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-            </div>
-
-
-            <div class="AE_COLLECTION_GRID">
-
-
-                <a href="categories.php?category=toys"
-                   class="AE_COLLECTION_CARD AE_COLLECTION_BIG">
-
-                    <div class="AE_COLLECTION_ICON">
-                        <i class="fa-solid fa-puzzle-piece"></i>
-                    </div>
-
-                    <small>COLLECTION 01</small>
-
-                    <h3>Toys & Play</h3>
-
-                    <p>
-                        Fun and playful choices for little ones.
-                    </p>
-
-                    <i class="fa-solid fa-arrow-right AE_COLLECTION_ARROW"></i>
-
-                </a>
-
-
-                <a href="categories.php?category=stuff-toys"
-                   class="AE_COLLECTION_CARD">
-
-                    <div class="AE_COLLECTION_ICON">
-                        <i class="fa-solid fa-gift"></i>
-                    </div>
-
-                    <small>COLLECTION 02</small>
-
-                    <h3>Stuff Toys</h3>
-
-                    <p>
-                        Cute and playful companions.
-                    </p>
-
-                    <i class="fa-solid fa-arrow-right AE_COLLECTION_ARROW"></i>
-
-                </a>
-
-
-                <a href="categories.php?category=electric-cars"
-                   class="AE_COLLECTION_CARD">
-
-                    <div class="AE_COLLECTION_ICON">
-                        <i class="fa-solid fa-car"></i>
-                    </div>
-
-                    <small>COLLECTION 03</small>
-
-                    <h3>Electric Cars</h3>
-
-                    <p>
-                        Exciting rides for young explorers.
-                    </p>
-
-                    <i class="fa-solid fa-arrow-right AE_COLLECTION_ARROW"></i>
-
-                </a>
-
-
-                <a href="categories.php?category=school-picnic-bags"
-                   class="AE_COLLECTION_CARD">
-
-                    <div class="AE_COLLECTION_ICON">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                    </div>
-
-                    <small>COLLECTION 04</small>
-
-                    <h3>School & Picnic</h3>
-
-                    <p>
-                        Practical bags for everyday adventures.
-                    </p>
-
-                    <i class="fa-solid fa-arrow-right AE_COLLECTION_ARROW"></i>
-
-                </a>
-
-
-                <a href="categories.php?category=crockery"
-                   class="AE_COLLECTION_CARD">
-
-                    <div class="AE_COLLECTION_ICON">
-                        <i class="fa-solid fa-mug-hot"></i>
-                    </div>
-
-                    <small>COLLECTION 05</small>
-
-                    <h3>Crockery</h3>
-
-                    <p>
-                        Beautiful essentials for the home.
-                    </p>
-
-                    <i class="fa-solid fa-arrow-right AE_COLLECTION_ARROW"></i>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= EXPERIENCE ================= -->
-
-    <section class="AE_ABOUT_SECTION AE_EXPERIENCE">
-
-        <div class="AE_ABOUT_CONTAINER AE_EXPERIENCE_GRID">
-
-
-            <div class="AE_EXPERIENCE_VISUAL">
-
-                <div class="AE_EXPERIENCE_FRAME">
-
-                    <div class="AE_EXPERIENCE_LOGO">
-                        AE
-                    </div>
-
-                    <span>
-                        ESTABLISHED WITH
-                    </span>
-
-                    <strong>
-                        CARE & PURPOSE
-                    </strong>
-
-                    <small>
-                        AWAISI EMPORIUM
-                    </small>
-
-                </div>
-
-
-                <div class="AE_EXPERIENCE_STAMP">
-
-                    <i class="fa-solid fa-check"></i>
-
-                    <span>
-                        SHOP
-                    </span>
-
-                    <strong>
-                        WITH<br>
-                        CONFIDENCE
-                    </strong>
-
-                </div>
-
-            </div>
-
-
-            <div class="AE_EXPERIENCE_CONTENT">
-
-                <div class="AE_LABEL">
-                    THE EXPERIENCE
-                </div>
-
-                <h2>
-                    Small details.
-                    <span>Big difference.</span>
-                </h2>
-
-                <p>
-                    Awaisi Emporium is designed to feel calm, clear
-                    and premium. We believe the little details of a
-                    shopping experience can make a big difference.
-                </p>
-
-
-                <div class="AE_EXPERIENCE_LIST">
-
-                    <div>
-
-                        <i class="fa-solid fa-check"></i>
-
-                        <section>
-                            <strong>Clear Collections</strong>
-                            <span>
-                                Find products without unnecessary complexity.
-                            </span>
-                        </section>
-
-                    </div>
-
-
-                    <div>
-
-                        <i class="fa-solid fa-check"></i>
-
-                        <section>
-                            <strong>Thoughtful Presentation</strong>
-                            <span>
-                                A clean and intentional shopping environment.
-                            </span>
-                        </section>
-
-                    </div>
-
-
-                    <div>
-
-                        <i class="fa-solid fa-check"></i>
-
-                        <section>
-                            <strong>Customer First</strong>
-                            <span>
-                                Convenience and support remain important.
-                            </span>
-                        </section>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= CTA ================= -->
-
-    <section class="AE_ABOUT_CTA">
-
-        <div class="AE_CTA_GLOW"></div>
-
-        <div class="AE_CTA_CONTENT">
-
-            <span>
-                AWAISI EMPORIUM
-            </span>
-
-            <h2>
-                Ready to discover
-                <em>something special?</em>
-            </h2>
-
-            <p>
-                Explore our collections and discover products
-                selected for everyday life, family and home.
-            </p>
-
-            <div class="AE_CTA_BUTTONS">
-
-                <a href="products.php"
-                   class="AE_ABOUT_BTN AE_CTA_LIGHT">
-                    Shop Now
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-                <a href="contact.php"
-                   class="AE_CTA_CONTACT">
-                    Contact Us
-                    <i class="fa-solid fa-headset"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="AE_CTA_MARK">
-            AE
-        </div>
-
-    </section>
-
-</main>
-
-
-<style>
-
-/* =========================================================
-   AWAISI EMPORIUM
-   PREMIUM ABOUT PAGE
-========================================================= */
-
-html {
-    scroll-behavior: smooth;
+<!-- <?php
+/* ============================================================
+   AWAISI EMPORIUM — PREMIUM CART + CHECKOUT + RECEIPT
+   ------------------------------------------------------------
+   CHANGE HERE:
+   1. Store name       -> $store_name
+   2. Currency         -> $currency
+   3. Phone / email    -> $store_phone / $store_email
+   4. Delivery fee     -> $delivery_fee
+   ============================================================ */
+
+session_start();
+require_once "connection.php";
+
+/* ============================================================
+   STORE SETTINGS — EASY TO CHANGE
+   ============================================================ */
+$store_name  = "awaisiempo";
+$currency    = "PKR";
+$store_phone = "+92 300 0000000";
+$store_email = "support@awaisiemporium.com";
+$delivery_fee = 0; // Change to your delivery charge, e.g. 250
+
+/* ============================================================
+   HELPERS
+   ============================================================ */
+function ae_cart_escape($value)
+{
+    return htmlspecialchars((string)$value, ENT_QUOTES, "UTF-8");
 }
 
-.AE_ABOUT {
-    width: 100%;
-    overflow: hidden;
-    color: #321923;
-    background: #fffdf8;
-    font-family: "DM Sans", Arial, sans-serif;
+function ae_cart_image($image)
+{
+    $image = trim((string)$image);
+
+    if ($image === "") {
+        return "";
+    }
+
+    if (
+        str_starts_with($image, "http://") ||
+        str_starts_with($image, "https://")
+    ) {
+        return $image;
+    }
+
+    if (str_starts_with($image, "uploads/")) {
+        return $image;
+    }
+
+    return "uploads/products/" . $image;
 }
 
-.AE_ABOUT *,
-.AE_ABOUT *::before,
-.AE_ABOUT *::after {
-    box-sizing: border-box;
+function ae_cart_money($amount)
+{
+    return number_format((float)$amount, 2);
 }
 
-.AE_ABOUT a {
-    text-decoration: none;
+/* ============================================================
+   CART INITIALIZATION
+   ============================================================ */
+if (!isset($_SESSION["ae_cart"]) || !is_array($_SESSION["ae_cart"])) {
+    $_SESSION["ae_cart"] = [];
 }
 
-.AE_ABOUT_CONTAINER {
-    width: 100%;
-    max-width: 1240px;
-    margin: auto;
-    padding-left: 30px;
-    padding-right: 30px;
-}
+/* ============================================================
+   CART ACTIONS
+   ============================================================ */
 
+/* Add a product directly from another page if needed. */
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["add_to_cart"])) {
 
-/* HERO */
+    $product_id = (int)($_POST["product_id"] ?? 0);
 
-.AE_ABOUT_HERO {
-    min-height: 690px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+    if ($product_id > 0) {
 
-    background:
-        radial-gradient(
-            circle at 85% 18%,
-            rgba(216,181,106,.20),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 5% 90%,
-            rgba(110,24,48,.08),
-            transparent 28%
-        ),
-        linear-gradient(
-            135deg,
-            #fffdf8,
-            #f8eee3 58%,
-            #f0dfcf
-        );
-}
-
-.AE_ABOUT_GLOW {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.AE_ABOUT_GLOW_1 {
-    width: 430px;
-    height: 430px;
-    right: -180px;
-    top: -190px;
-    border: 1px solid rgba(216,181,106,.25);
-}
-
-.AE_ABOUT_GLOW_2 {
-    width: 300px;
-    height: 300px;
-    left: -170px;
-    bottom: -180px;
-    background: rgba(110,24,48,.04);
-}
-
-.AE_ABOUT_HERO_INNER {
-    width: 100%;
-    max-width: 1240px;
-    margin: auto;
-    padding: 90px 30px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 65px;
-}
-
-.AE_ABOUT_HERO_TEXT {
-    position: relative;
-    z-index: 2;
-}
-
-.AE_ABOUT_EYEBROW {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    color: #9a713d;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 3px;
-}
-
-.AE_ABOUT_EYEBROW span {
-    width: 28px;
-    height: 2px;
-    background: #d8b56a;
-}
-
-.AE_ABOUT_HERO_TEXT h1 {
-    margin-top: 18px;
-
-    color: #42101f;
-    font-family: "Playfair Display", Georgia, serif;
-
-    font-size: clamp(52px, 7vw, 86px);
-    line-height: .98;
-    letter-spacing: -3px;
-}
-
-.AE_ABOUT_HERO_TEXT h1 em {
-    display: block;
-    color: #9a713d;
-    font-style: normal;
-}
-
-.AE_ABOUT_HERO_TEXT > p {
-    max-width: 550px;
-    margin-top: 25px;
-
-    color: #806a70;
-    font-size: 13px;
-    line-height: 1.9;
-}
-
-.AE_ABOUT_BUTTONS {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 32px;
-}
-
-.AE_ABOUT_BTN {
-    min-height: 49px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-
-    padding: 0 21px;
-    border-radius: 8px;
-
-    font-size: 10px;
-    font-weight: 800;
-
-    transition: .25s ease;
-}
-
-.AE_ABOUT_PRIMARY {
-    color: #fff;
-    background: #6e1830;
-
-    box-shadow:
-        0 13px 32px
-        rgba(110,24,48,.18);
-}
-
-.AE_ABOUT_PRIMARY:hover {
-    color: #fff;
-    background: #42101f;
-    transform: translateY(-3px);
-}
-
-.AE_ABOUT_SECONDARY {
-    color: #6e1830;
-    background: rgba(255,255,255,.65);
-
-    border: 1px solid rgba(110,24,48,.18);
-}
-
-.AE_ABOUT_SECONDARY:hover {
-    color: #42101f;
-    background: #fff;
-    border-color: #d8b56a;
-    transform: translateY(-3px);
-}
-
-
-/* HERO VISUAL */
-
-.AE_ABOUT_VISUAL {
-    min-height: 500px;
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.AE_ABOUT_ORB {
-    width: min(455px, 85vw);
-    aspect-ratio: 1;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle at 50% 43%,
-            #fff,
-            #ead8c3 66%,
-            #d8b56a
+        $stmt = mysqli_prepare(
+            $conn,
+            "SELECT id, name, description, price, category, image
+             FROM products
+             WHERE id = ?
+             LIMIT 1"
         );
 
-    border: 1px solid rgba(216,181,106,.60);
-
-    box-shadow:
-        0 35px 85px
-        rgba(66,16,31,.13);
-}
-
-.AE_ABOUT_ORB::before,
-.AE_ABOUT_ORB::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-}
-
-.AE_ABOUT_ORB::before {
-    inset: 20px;
-    border: 1px solid rgba(110,24,48,.13);
-}
-
-.AE_ABOUT_ORB::after {
-    inset: 42px;
-    border: 1px dashed rgba(110,24,48,.13);
-}
-
-.AE_ORB_RING {
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid rgba(216,181,106,.35);
-}
-
-.AE_RING_1 {
-    inset: 72px;
-}
-
-.AE_RING_2 {
-    inset: 92px;
-    border-style: dashed;
-}
-
-.AE_ABOUT_SEAL {
-    width: 205px;
-    height: 205px;
-
-    position: relative;
-    z-index: 3;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    border: 2px solid #d8b56a;
-    border-radius: 50%;
-
-    color: #fff;
-    background: #6e1830;
-
-    box-shadow:
-        0 20px 50px
-        rgba(66,16,31,.22);
-
-    text-align: center;
-}
-
-.AE_ABOUT_SEAL > strong {
-    color: #d8b56a;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 42px;
-}
-
-.AE_SEAL_LINE {
-    width: 38px;
-    height: 1px;
-    margin: 5px 0 9px;
-    background: #d8b56a;
-}
-
-.AE_ABOUT_SEAL b {
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 18px;
-    letter-spacing: 2px;
-}
-
-.AE_ABOUT_SEAL small {
-    margin-top: 2px;
-    color: #d8b56a;
-    font-size: 7px;
-    font-weight: 800;
-    letter-spacing: 3px;
-}
-
-.AE_ABOUT_SEAL label {
-    margin-top: 13px;
-    color: rgba(255,255,255,.58);
-    font-size: 6px;
-    letter-spacing: 1.8px;
-}
-
-.AE_FLOAT_CARD {
-    position: absolute;
-    z-index: 5;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    padding: 12px 15px;
-
-    border: 1px solid rgba(216,181,106,.38);
-    border-radius: 11px;
-
-    background: rgba(255,255,255,.90);
-
-    box-shadow:
-        0 18px 42px
-        rgba(66,16,31,.12);
-
-    backdrop-filter: blur(12px);
-}
-
-.AE_FLOAT_TOP {
-    top: 45px;
-    right: -4px;
-}
-
-.AE_FLOAT_BOTTOM {
-    bottom: 45px;
-    left: -4px;
-}
-
-.AE_FLOAT_ICON {
-    width: 36px;
-    height: 36px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 9px;
-
-    color: #9a713d;
-    background: #f7eee2;
-}
-
-.AE_FLOAT_CARD strong,
-.AE_FLOAT_CARD span {
-    display: block;
-}
-
-.AE_FLOAT_CARD strong {
-    color: #42101f;
-    font-size: 10px;
-}
-
-.AE_FLOAT_CARD span {
-    margin-top: 3px;
-    color: #9a898c;
-    font-size: 8px;
-}
-
-
-/* GENERAL SECTION */
-
-.AE_ABOUT_SECTION {
-    padding: 105px 0;
-    background: #fffdf8;
-}
-
-
-/* STORY */
-
-.AE_STORY_GRID {
-    display: grid;
-    grid-template-columns: 110px 1fr 300px;
-    gap: 55px;
-    align-items: start;
-}
-
-.AE_SECTION_NUMBER {
-    display: flex;
-    flex-direction: column;
-}
-
-.AE_SECTION_NUMBER strong {
-    color: #6e1830;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 44px;
-}
-
-.AE_SECTION_NUMBER span {
-    width: 45px;
-    height: 1px;
-    margin: 9px 0;
-    background: #d8b56a;
-}
-
-.AE_SECTION_NUMBER small {
-    color: #9a713d;
-    font-size: 7px;
-    font-weight: 800;
-    letter-spacing: 1.8px;
-}
-
-.AE_LABEL {
-    color: #9a713d;
-    font-size: 8px;
-    font-weight: 800;
-    letter-spacing: 2.5px;
-}
-
-.AE_STORY_CONTENT h2,
-.AE_CENTER_TITLE h2,
-.AE_COLLECTION_HEAD h2,
-.AE_EXPERIENCE_CONTENT h2 {
-    margin-top: 9px;
-
-    color: #42101f;
-    font-family: "Playfair Display", Georgia, serif;
-
-    font-size: clamp(34px, 4vw, 52px);
-    line-height: 1.08;
-}
-
-.AE_STORY_CONTENT h2 span,
-.AE_CENTER_TITLE h2 span,
-.AE_COLLECTION_HEAD h2 span,
-.AE_EXPERIENCE_CONTENT h2 span {
-    color: #9a713d;
-}
-
-.AE_STORY_CONTENT p {
-    max-width: 690px;
-    margin-top: 18px;
-
-    color: #806a70;
-    font-size: 12px;
-    line-height: 1.95;
-}
-
-.AE_TEXT_LINK {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    margin-top: 24px;
-
-    color: #6e1830;
-    font-size: 10px;
-    font-weight: 800;
-
-    transition: .2s ease;
-}
-
-.AE_TEXT_LINK:hover {
-    color: #9a713d;
-    gap: 12px;
-}
-
-.AE_STORY_QUOTE {
-    padding: 28px;
-
-    border-left: 2px solid #d8b56a;
-    background: #f8eee3;
-}
-
-.AE_QUOTE_MARK {
-    color: #d8b56a;
-    font-family: Georgia, serif;
-    font-size: 55px;
-    line-height: .6;
-}
-
-.AE_STORY_QUOTE p {
-    margin-top: 12px;
-
-    color: #42101f;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 21px;
-    line-height: 1.4;
-}
-
-.AE_STORY_QUOTE span {
-    display: block;
-    margin-top: 17px;
-
-    color: #9a713d;
-    font-size: 8px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-}
-
-
-/* STATS */
-
-.AE_STATS {
-    border-top: 1px solid #eadbd0;
-    border-bottom: 1px solid #eadbd0;
-    background: #f8eee3;
-}
-
-.AE_STATS_GRID {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.AE_STAT {
-    min-height: 150px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding: 25px;
-
-    border-right: 1px solid #eadbd0;
-}
-
-.AE_STAT:first-child {
-    border-left: 1px solid #eadbd0;
-}
-
-.AE_STAT strong {
-    color: #6e1830;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 30px;
-}
-
-.AE_STAT span {
-    margin-top: 5px;
-
-    color: #9a898c;
-    font-size: 8px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-}
-
-
-/* VALUES */
-
-.AE_VALUES_SECTION {
-    background: #fffdf8;
-}
-
-.AE_CENTER_TITLE {
-    max-width: 650px;
-    margin: 0 auto 48px;
-    text-align: center;
-}
-
-.AE_CENTER_TITLE p {
-    margin-top: 12px;
-    color: #8d7b7e;
-    font-size: 11px;
-}
-
-.AE_VALUES_GRID {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-}
-
-.AE_VALUE {
-    min-height: 270px;
-
-    position: relative;
-
-    padding: 25px;
-
-    overflow: hidden;
-
-    border: 1px solid #eadbd0;
-    border-radius: 15px;
-
-    background: #fff;
-
-    transition: .3s ease;
-}
-
-.AE_VALUE:hover {
-    transform: translateY(-7px);
-    border-color: rgba(216,181,106,.70);
-
-    box-shadow:
-        0 20px 45px
-        rgba(66,16,31,.09);
-}
-
-.AE_VALUE_MAIN {
-    color: #fff;
-    background: #6e1830;
-    border-color: #6e1830;
-}
-
-.AE_VALUE_TOP {
-    display: flex;
-    justify-content: space-between;
-}
-
-.AE_VALUE_TOP span {
-    color: #9a713d;
-    font-size: 8px;
-    font-weight: 800;
-}
-
-.AE_VALUE_TOP i {
-    color: #d8b56a;
-}
-
-.AE_VALUE h3 {
-    margin-top: 45px;
-
-    color: #42101f;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 23px;
-}
-
-.AE_VALUE_MAIN h3 {
-    color: #fff;
-}
-
-.AE_VALUE p {
-    margin-top: 10px;
-
-    color: #8d7b7e;
-    font-size: 10px;
-    line-height: 1.8;
-}
-
-.AE_VALUE_MAIN p {
-    color: rgba(255,255,255,.64);
-}
-
-.AE_VALUE_LINE {
-    width: 42px;
-    height: 2px;
-
-    position: absolute;
-    left: 25px;
-    bottom: 24px;
-
-    background: #d8b56a;
-}
-
-
-/* COLLECTIONS */
-
-.AE_COLLECTIONS {
-    padding: 105px 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            #f8f0e6,
-            #f5eadd
-        );
-}
-
-.AE_COLLECTION_HEAD {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 25px;
-
-    margin-bottom: 40px;
-}
-
-.AE_COLLECTION_GRID {
-    display: grid;
-
-    grid-template-columns:
-        1.3fr 1fr 1fr;
-
-    grid-template-rows:
-        1fr 1fr;
-
-    gap: 15px;
-}
-
-.AE_COLLECTION_CARD {
-    min-height: 220px;
-
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    padding: 25px;
-
-    overflow: hidden;
-
-    border: 1px solid #eadbd0;
-    border-radius: 16px;
-
-    color: #321923;
-    background: rgba(255,255,255,.70);
-
-    transition: .3s ease;
-}
-
-.AE_COLLECTION_BIG {
-    grid-row: 1 / 3;
-    min-height: 455px;
-
-    color: #fff;
-
-    background:
-        radial-gradient(
-            circle at 90% 10%,
-            rgba(216,181,106,.20),
-            transparent 35%
-        ),
-        #6e1830;
-}
-
-.AE_COLLECTION_CARD:hover {
-    color: #321923;
-    transform: translateY(-6px);
-
-    border-color: #d8b56a;
-
-    box-shadow:
-        0 22px 50px
-        rgba(66,16,31,.10);
-}
-
-.AE_COLLECTION_BIG:hover {
-    color: #fff;
-}
-
-.AE_COLLECTION_ICON {
-    width: 48px;
-    height: 48px;
-
-    position: absolute;
-    top: 24px;
-    left: 24px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 12px;
-
-    color: #9a713d;
-    background: #f7eee2;
-}
-
-.AE_COLLECTION_BIG .AE_COLLECTION_ICON {
-    color: #d8b56a;
-    background: rgba(255,255,255,.10);
-}
-
-.AE_COLLECTION_CARD small {
-    color: #9a713d;
-    font-size: 7px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.AE_COLLECTION_BIG small {
-    color: #d8b56a;
-}
-
-.AE_COLLECTION_CARD h3 {
-    margin-top: 7px;
-
-    color: #42101f;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 23px;
-}
-
-.AE_COLLECTION_BIG h3 {
-    color: #fff;
-    font-size: 34px;
-}
-
-.AE_COLLECTION_CARD p {
-    max-width: 300px;
-    margin-top: 5px;
-
-    color: #8d7b7e;
-    font-size: 9px;
-    line-height: 1.7;
-}
-
-.AE_COLLECTION_BIG p {
-    color: rgba(255,255,255,.62);
-}
-
-.AE_COLLECTION_ARROW {
-    position: absolute;
-    right: 24px;
-    bottom: 24px;
-
-    color: #d8b56a;
-}
-
-
-/* EXPERIENCE */
-
-.AE_EXPERIENCE {
-    background: #fffdf8;
-}
-
-.AE_EXPERIENCE_GRID {
-    display: grid;
-
-    grid-template-columns:
-        .95fr 1.05fr;
-
-    align-items: center;
-    gap: 85px;
-}
-
-.AE_EXPERIENCE_VISUAL {
-    min-height: 500px;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.AE_EXPERIENCE_FRAME {
-    width: min(390px, 90%);
-    aspect-ratio: 4 / 5;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid #d8b56a;
-    outline: 1px solid rgba(216,181,106,.35);
-    outline-offset: 13px;
-
-    background:
-        radial-gradient(
-            circle at 50% 20%,
-            rgba(216,181,106,.16),
-            transparent 35%
-        ),
-        #6e1830;
-
-    text-align: center;
-
-    box-shadow:
-        0 30px 65px
-        rgba(66,16,31,.16);
-}
-
-.AE_EXPERIENCE_LOGO {
-    width: 105px;
-    height: 105px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 2px solid #d8b56a;
-    border-radius: 50%;
-
-    color: #d8b56a;
-
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 36px;
-}
-
-.AE_EXPERIENCE_FRAME span {
-    margin-top: 35px;
-
-    color: #d8b56a;
-    font-size: 7px;
-    font-weight: 800;
-    letter-spacing: 3px;
-}
-
-.AE_EXPERIENCE_FRAME strong {
-    margin-top: 9px;
-
-    color: #fff;
-
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 25px;
-}
-
-.AE_EXPERIENCE_FRAME small {
-    margin-top: 12px;
-
-    color: rgba(255,255,255,.45);
-    font-size: 6px;
-    letter-spacing: 2px;
-}
-
-.AE_EXPERIENCE_STAMP {
-    width: 115px;
-    height: 115px;
-
-    position: absolute;
-    right: 2%;
-    bottom: 18%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid #d8b56a;
-    border-radius: 50%;
-
-    color: #6e1830;
-    background: #fffdf8;
-
-    box-shadow:
-        0 15px 35px
-        rgba(66,16,31,.13);
-
-    text-align: center;
-}
-
-.AE_EXPERIENCE_STAMP i {
-    color: #9a713d;
-}
-
-.AE_EXPERIENCE_STAMP span {
-    margin-top: 5px;
-    font-size: 6px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.AE_EXPERIENCE_STAMP strong {
-    margin-top: 4px;
-
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 12px;
-    line-height: 1.1;
-}
-
-.AE_EXPERIENCE_CONTENT > p {
-    max-width: 570px;
-    margin-top: 20px;
-
-    color: #806a70;
-    font-size: 12px;
-    line-height: 1.9;
-}
-
-.AE_EXPERIENCE_LIST {
-    margin-top: 30px;
-}
-
-.AE_EXPERIENCE_LIST > div {
-    display: flex;
-    align-items: flex-start;
-    gap: 13px;
-
-    padding: 17px 0;
-
-    border-bottom: 1px solid #eee2d7;
-}
-
-.AE_EXPERIENCE_LIST > div:first-child {
-    border-top: 1px solid #eee2d7;
-}
-
-.AE_EXPERIENCE_LIST > div > i {
-    width: 25px;
-    height: 25px;
-
-    flex: 0 0 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    color: #9a713d;
-    background: #f7eee2;
-
-    font-size: 8px;
-}
-
-.AE_EXPERIENCE_LIST strong,
-.AE_EXPERIENCE_LIST span {
-    display: block;
-}
-
-.AE_EXPERIENCE_LIST strong {
-    color: #42101f;
-    font-size: 10px;
-}
-
-.AE_EXPERIENCE_LIST span {
-    margin-top: 4px;
-    color: #958488;
-    font-size: 9px;
-    line-height: 1.6;
-}
-
-
-/* CTA */
-
-.AE_ABOUT_CTA {
-    width: calc(100% - 60px);
-    max-width: 1180px;
-    min-height: 365px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    margin: 0 auto 90px;
-    padding: 65px 55px;
-
-    border-radius: 22px;
-
-    color: #fff;
-
-    background:
-        radial-gradient(
-            circle at 88% 20%,
-            rgba(216,181,106,.20),
-            transparent 28%
-        ),
-        linear-gradient(
-            120deg,
-            #42101f,
-            #6e1830
-        );
-}
-
-.AE_CTA_GLOW {
-    width: 400px;
-    height: 400px;
-
-    position: absolute;
-    right: -190px;
-    bottom: -220px;
-
-    border: 1px solid rgba(216,181,106,.25);
-    border-radius: 50%;
-}
-
-.AE_CTA_CONTENT {
-    position: relative;
-    z-index: 2;
-}
-
-.AE_CTA_CONTENT > span {
-    color: #d8b56a;
-    font-size: 8px;
-    font-weight: 800;
-    letter-spacing: 2.5px;
-}
-
-.AE_CTA_CONTENT h2 {
-    max-width: 650px;
-    margin-top: 10px;
-
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(34px, 5vw, 54px);
-    line-height: 1.05;
-}
-
-.AE_CTA_CONTENT h2 em {
-    color: #d8b56a;
-    font-style: normal;
-}
-
-.AE_CTA_CONTENT p {
-    max-width: 520px;
-    margin-top: 14px;
-
-    color: rgba(255,255,255,.62);
-    font-size: 11px;
-    line-height: 1.8;
-}
-
-.AE_CTA_BUTTONS {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
-
-    margin-top: 25px;
-}
-
-.AE_CTA_LIGHT {
-    color: #42101f;
-    background: #d8b56a;
-}
-
-.AE_CTA_LIGHT:hover {
-    color: #42101f;
-    background: #fff;
-    transform: translateY(-3px);
-}
-
-.AE_CTA_CONTACT {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    color: rgba(255,255,255,.72);
-
-    font-size: 10px;
-    font-weight: 800;
-}
-
-.AE_CTA_CONTACT:hover {
-    color: #d8b56a;
-}
-
-.AE_CTA_MARK {
-    position: absolute;
-    right: 70px;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    color: rgba(216,181,106,.08);
-
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 210px;
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media (max-width: 1050px) {
-
-    .AE_ABOUT_HERO_INNER {
-        grid-template-columns: 1fr;
-        text-align: center;
+        if ($stmt) {
+            mysqli_stmt_bind_param($stmt, "i", $product_id);
+            mysqli_stmt_execute($stmt);
+
+            $result = mysqli_stmt_get_result($stmt);
+            $product = mysqli_fetch_assoc($result);
+
+            if ($product) {
+
+                if (isset($_SESSION["ae_cart"][$product_id])) {
+                    $_SESSION["ae_cart"][$product_id]["quantity"]++;
+                } else {
+                    $_SESSION["ae_cart"][$product_id] = [
+                        "id"       => (int)$product["id"],
+                        "name"     => $product["name"],
+                        "price"    => (float)$product["price"],
+                        "category" => $product["category"],
+                        "image"    => $product["image"],
+                        "quantity" => 1
+                    ];
+                }
+
+                $_SESSION["ae_cart_message"] =
+                    $product["name"] . " added to your cart.";
+            }
+
+            mysqli_stmt_close($stmt);
+        }
     }
 
-    .AE_ABOUT_HERO_TEXT > p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .AE_ABOUT_EYEBROW {
-        justify-content: center;
-    }
-
-    .AE_ABOUT_BUTTONS {
-        justify-content: center;
-    }
-
-    .AE_STORY_GRID {
-        grid-template-columns: 80px 1fr;
-    }
-
-    .AE_STORY_QUOTE {
-        grid-column: 2;
-    }
-
-    .AE_VALUES_GRID {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .AE_COLLECTION_GRID {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .AE_COLLECTION_BIG {
-        grid-column: 1 / -1;
-        grid-row: auto;
-        min-height: 330px;
-    }
-
-    .AE_EXPERIENCE_GRID {
-        gap: 55px;
-    }
+    header("Location: cart.php");
+    exit;
 }
 
+/* Update quantities. */
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["update_cart"])) {
 
-@media (max-width: 760px) {
+    $quantities = $_POST["quantity"] ?? [];
 
-    .AE_ABOUT_HERO {
-        min-height: auto;
+    if (is_array($quantities)) {
+        foreach ($quantities as $product_id => $quantity) {
+
+            $product_id = (int)$product_id;
+            $quantity   = (int)$quantity;
+
+            if ($product_id <= 0) {
+                continue;
+            }
+
+            if ($quantity <= 0) {
+                unset($_SESSION["ae_cart"][$product_id]);
+                continue;
+            }
+
+            if (isset($_SESSION["ae_cart"][$product_id])) {
+                $_SESSION["ae_cart"][$product_id]["quantity"] = min($quantity, 99);
+            }
+        }
     }
 
-    .AE_ABOUT_HERO_INNER {
-        padding: 65px 20px;
-    }
+    $_SESSION["ae_cart_message"] = "Cart updated successfully.";
 
-    .AE_ABOUT_HERO_TEXT h1 {
-        font-size: 52px;
-        letter-spacing: -2px;
-    }
-
-    .AE_ABOUT_VISUAL {
-        min-height: 390px;
-    }
-
-    .AE_ABOUT_ORB {
-        width: 330px;
-    }
-
-    .AE_ABOUT_SEAL {
-        width: 160px;
-        height: 160px;
-    }
-
-    .AE_ABOUT_SEAL > strong {
-        font-size: 32px;
-    }
-
-    .AE_FLOAT_TOP {
-        top: 8px;
-        right: 0;
-    }
-
-    .AE_FLOAT_BOTTOM {
-        bottom: 8px;
-        left: 0;
-    }
-
-    .AE_ABOUT_CONTAINER {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .AE_ABOUT_SECTION,
-    .AE_COLLECTIONS {
-        padding: 70px 0;
-    }
-
-    .AE_STORY_GRID {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .AE_SECTION_NUMBER {
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .AE_SECTION_NUMBER span {
-        margin: 0;
-    }
-
-    .AE_STORY_QUOTE {
-        grid-column: auto;
-    }
-
-    .AE_STATS_GRID {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .AE_STAT {
-        min-height: 125px;
-    }
-
-    .AE_COLLECTION_HEAD {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .AE_COLLECTION_GRID {
-        grid-template-columns: 1fr;
-    }
-
-    .AE_COLLECTION_BIG {
-        grid-column: auto;
-    }
-
-    .AE_EXPERIENCE_GRID {
-        grid-template-columns: 1fr;
-    }
-
-    .AE_EXPERIENCE_VISUAL {
-        min-height: 430px;
-    }
-
-    .AE_ABOUT_CTA {
-        width: calc(100% - 40px);
-        margin-bottom: 65px;
-        padding: 45px 25px;
-    }
-
-    .AE_CTA_MARK {
-        right: 0;
-        font-size: 150px;
-        opacity: .6;
-    }
+    header("Location: cart.php");
+    exit;
 }
 
+/* Remove one product. */
+if (isset($_GET["remove"])) {
 
-@media (max-width: 520px) {
+    $remove_id = (int)$_GET["remove"];
 
-    .AE_ABOUT_HERO_TEXT h1 {
-        font-size: 43px;
+    if ($remove_id > 0) {
+        unset($_SESSION["ae_cart"][$remove_id]);
     }
 
-    .AE_ABOUT_HERO_TEXT > p {
-        font-size: 11px;
-    }
-
-    .AE_ABOUT_BUTTONS,
-    .AE_CTA_BUTTONS {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .AE_ABOUT_BTN {
-        width: 100%;
-    }
-
-    .AE_VALUES_GRID {
-        grid-template-columns: 1fr;
-    }
-
-    .AE_COLLECTION_BIG {
-        min-height: 300px;
-    }
-
-    .AE_EXPERIENCE_VISUAL {
-        min-height: 380px;
-    }
-
-    .AE_EXPERIENCE_FRAME {
-        width: 75%;
-    }
-
-    .AE_EXPERIENCE_STAMP {
-        width: 92px;
-        height: 92px;
-        right: 0;
-    }
-
-    .AE_CTA_MARK {
-        display: none;
-    }
+    header("Location: cart.php");
+    exit;
 }
 
-@media (prefers-reduced-motion: reduce) {
+/* Clear the complete cart. */
+if (isset($_GET["clear"]) && $_GET["clear"] === "1") {
 
-    html {
-        scroll-behavior: auto;
-    }
+    $_SESSION["ae_cart"] = [];
+    $_SESSION["ae_cart_message"] = "Your cart is now empty.";
 
-    .AE_ABOUT *,
-    .AE_ABOUT *::before,
-    .AE_ABOUT *::after {
-        transition-duration: .01ms !important;
-    }
+    header("Location: cart.php");
+    exit;
 }
 
-</style>
+/* ============================================================
+   CREATE ORDER TABLES IF THEY DO NOT EXIST
+   ============================================================ */
+mysqli_query(
+    $conn,
+    "CREATE TABLE IF NOT EXISTS orders (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        order_number VARCHAR(50) NOT NULL UNIQUE,
+        customer_name VARCHAR(150) NOT NULL,
+        customer_email VARCHAR(150) DEFAULT '',
+        customer_phone VARCHAR(50) NOT NULL,
+        customer_address TEXT NOT NULL,
+        payment_method VARCHAR(50) NOT NULL DEFAULT 'Cash on Delivery',
+        subtotal DECIMAL(12,2) NOT NULL DEFAULT 0,
+        delivery_fee DECIMAL(12,2) NOT NULL DEFAULT 0,
+        total DECIMAL(12,2) NOT NULL DEFAULT 0,
+        status VARCHAR(30) NOT NULL DEFAULT 'pending',
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4"
+);
 
+mysqli_query(
+    $conn,
+    "CREATE TABLE IF NOT EXISTS order_items (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        order_id INT NOT NULL,
+        product_id INT NOT NULL,
+        product_name VARCHAR(150) NOT NULL,
+        price DECIMAL(12,2) NOT NULL DEFAULT 0,
+        quantity INT NOT NULL DEFAULT 1,
+        line_total DECIMAL(12,2) NOT NULL DEFAULT 0,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        INDEX (order_id),
+        INDEX (product_id)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4"
+);
 
-<script>
+/* ============================================================
+   CHECKOUT
+   ============================================================ */
+$checkout_error = "";
+$receipt = $_SESSION["ae_receipt"] ?? null;
 
-document.querySelectorAll(
-    '.AE_ABOUT a[href^="#"]'
-).forEach(function(link) {
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["place_order"])) {
 
-    link.addEventListener("click", function(event) {
+    $customer_name    = trim($_POST["customer_name"] ?? "");
+    $customer_email   = trim($_POST["customer_email"] ?? "");
+    $customer_phone   = trim($_POST["customer_phone"] ?? "");
+    $customer_address = trim($_POST["customer_address"] ?? "");
+    $payment_method   = trim($_POST["payment_method"] ?? "Cash on Delivery");
 
-        const targetId =
-            this.getAttribute("href");
+    if (empty($_SESSION["ae_cart"])) {
+        $checkout_error = "Your cart is empty. Please add a product first.";
+    } elseif ($customer_name === "" || $customer_phone === "" || $customer_address === "") {
+        $checkout_error = "Please fill in your name, phone number and delivery address.";
+    } elseif ($customer_email !== "" && !filter_var($customer_email, FILTER_VALIDATE_EMAIL)) {
+        $checkout_error = "Please enter a valid email address.";
+    } else {
 
-        const target =
-            document.querySelector(targetId);
+        /* Calculate totals from the session cart. */
+        $subtotal = 0;
 
-        if (!target) {
-            return;
+        foreach ($_SESSION["ae_cart"] as $item) {
+            $quantity = max(1, (int)($item["quantity"] ?? 1));
+            $price    = (float)($item["price"] ?? 0);
+            $subtotal += $price * $quantity;
         }
 
-        event.preventDefault();
+        $total = $subtotal + (float)$delivery_fee;
 
-        target.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
+        /* Unique receipt/order number. */
+        $order_number = "AE-" . date("YmdHis") . "-" . random_int(100, 999);
 
-    });
+        $stmt = mysqli_prepare(
+            $conn,
+            "INSERT INTO orders
+            (order_number, customer_name, customer_email, customer_phone,
+             customer_address, payment_method, subtotal, delivery_fee, total, status)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'pending')"
+        );
 
-});
+        if ($stmt) {
 
-</script>
+            mysqli_stmt_bind_param(
+                $stmt,
+                "ssssssddd",
+                $order_number,
+                $customer_name,
+                $customer_email,
+                $customer_phone,
+                $customer_address,
+                $payment_method,
+                $subtotal,
+                $delivery_fee,
+                $total
+            );
 
+            if (mysqli_stmt_execute($stmt)) {
+
+                $order_id = mysqli_insert_id($conn);
+                mysqli_stmt_close($stmt);
+
+                /* Save every purchased item. */
+                $item_stmt = mysqli_prepare(
+                    $conn,
+                    "INSERT INTO order_items
+                    (order_id, product_id, product_name, price, quantity, line_total)
+                    VALUES (?, ?, ?, ?, ?, ?)"
+                );
+
+                foreach ($_SESSION["ae_cart"] as $item) {
+
+                    $product_id = (int)($item["id"] ?? 0);
+                    $name       = (string)($item["name"] ?? "Product");
+                    $price      = (float)($item["price"] ?? 0);
+                    $quantity   = max(1, (int)($item["quantity"] ?? 1));
+                    $line_total = $price * $quantity;
+
+                    if ($item_stmt) {
+                        mysqli_stmt_bind_param(
+                            $item_stmt,
+                            "iisdid",
+                            $order_id,
+                            $product_id,
+                            $name,
+                            $price,
+                            $quantity,
+                            $line_total
+                        );
+                        mysqli_stmt_execute($item_stmt);
+                    }
+                }
+
+                if ($item_stmt) {
+                    mysqli_stmt_close($item_stmt);
+                }
+
+                /* Get exact database timestamp for the receipt. */
+                $saved_order = null;
+
+                $receipt_stmt = mysqli_prepare(
+                    $conn,
+                    "SELECT id, order_number, customer_name, customer_email,
+                            customer_phone, customer_address, payment_method,
+                            subtotal, delivery_fee, total, status, created_at
+                     FROM orders
+                     WHERE id = ?
+                     LIMIT 1"
+                );
+
+                if ($receipt_stmt) {
+                    mysqli_stmt_bind_param($receipt_stmt, "i", $order_id);
+                    mysqli_stmt_execute($receipt_stmt);
+                    $receipt_result = mysqli_stmt_get_result($receipt_stmt);
+                    $saved_order = mysqli_fetch_assoc($receipt_result);
+                    mysqli_stmt_close($receipt_stmt);
+                }
+
+                $receipt_items = [];
+
+                $receipt_items_stmt = mysqli_prepare(
+                    $conn,
+                    "SELECT product_name, price, quantity, line_total
+                     FROM order_items
+                     WHERE order_id = ?
+                     ORDER BY id ASC"
+                );
+
+                if ($receipt_items_stmt) {
+                    mysqli_stmt_bind_param($receipt_items_stmt, "i", $order_id);
+                    mysqli_stmt_execute($receipt_items_stmt);
+                    $receipt_items_result = mysqli_stmt_get_result($receipt_items_stmt);
+
+                    while ($row = mysqli_fetch_assoc($receipt_items_result)) {
+                        $receipt_items[] = $row;
+                    }
+
+                    mysqli_stmt_close($receipt_items_stmt);
+                }
+
+                $_SESSION["ae_receipt"] = [
+                    "order" => $saved_order,
+                    "items" => $receipt_items
+                ];
+
+                $_SESSION["ae_cart"] = [];
+                $_SESSION["ae_cart_message"] = "Order placed successfully.";
+
+                header("Location: cart.php?receipt=1");
+                exit;
+
+            } else {
+                $checkout_error = "Order could not be placed. Please try again.";
+                mysqli_stmt_close($stmt);
+            }
+
+        } else {
+            $checkout_error = "Database is not ready for orders. Please check your connection.php file.";
+        }
+    }
+}
+
+/* ============================================================
+   CURRENT CART TOTALS
+   ============================================================ */
+$cart_items = $_SESSION["ae_cart"];
+$cart_count = 0;
+$subtotal = 0;
+
+foreach ($cart_items as $item) {
+    $quantity = max(1, (int)($item["quantity"] ?? 1));
+    $price    = (float)($item["price"] ?? 0);
+
+    $cart_count += $quantity;
+    $subtotal += $price * $quantity;
+}
+
+$grand_total = $subtotal + (float)$delivery_fee;
+
+$cart_message = $_SESSION["ae_cart_message"] ?? "";
+unset($_SESSION["ae_cart_message"]);
+
+$show_receipt = isset($_GET["receipt"]) && $_GET["receipt"] === "1" && !empty($receipt);
+
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cart & Checkout | Awaisi Emporium</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+        /* ====================================================
+           PREMIUM CART THEME
+        ==================================================== */
+        :root {
+            --ae-maroon: #6e1830;
+            --ae-deep-maroon: #42101f;
+            --ae-champagne: #d8b56a;
+            --ae-champagne-soft: #f0dca8;
+            --ae-ivory: #fffdf8;
+            --ae-cream: #f7eee2;
+            --ae-text: #321923;
+            --ae-muted: #806a70;
+            --ae-border: #eadbd0;
+            --ae-white: #ffffff;
+            --ae-shadow: 0 20px 55px rgba(66, 16, 31, 0.10);
+            --ae-radius: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background:
+                radial-gradient(circle at 8% 10%, rgba(216, 181, 106, 0.13), transparent 25%),
+                radial-gradient(circle at 92% 18%, rgba(110, 24, 48, 0.10), transparent 28%),
+                var(--ae-ivory);
+            color: var(--ae-text);
+            min-height: 100vh;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .AEC_container {
+            width: min(1180px, calc(100% - 34px));
+            margin: 0 auto;
+        }
+
+        /* ====================================================
+           HERO
+        ==================================================== */
+        .AEC_hero {
+            position: relative;
+            overflow: hidden;
+            padding: 72px 0 52px;
+            background:
+                linear-gradient(135deg, rgba(66, 16, 31, 0.98), rgba(110, 24, 48, 0.94));
+            color: var(--ae-white);
+        }
+
+        .AEC_hero::before {
+            content: "";
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            right: -130px;
+            top: -180px;
+            background: rgba(216, 181, 106, 0.18);
+        }
+
+        .AEC_hero::after {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            left: -100px;
+            bottom: -130px;
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .AEC_hero_inner {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .AEC_kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            color: var(--ae-champagne-soft);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .AEC_hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 0.98;
+            margin-bottom: 18px;
+        }
+
+        .AEC_hero p {
+            max-width: 660px;
+            color: rgba(255,255,255,0.78);
+            line-height: 1.8;
+        }
+
+        .AEC_cart_pill {
+            min-width: 145px;
+            padding: 18px 20px;
+            border: 1px solid rgba(216, 181, 106, 0.42);
+            background: rgba(255,255,255,0.07);
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            text-align: center;
+        }
+
+        .AEC_cart_pill i {
+            color: var(--ae-champagne-soft);
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .AEC_cart_pill strong,
+        .AEC_cart_pill span {
+            display: block;
+        }
+
+        .AEC_cart_pill strong {
+            font-size: 22px;
+        }
+
+        .AEC_cart_pill span {
+            margin-top: 3px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.68);
+        }
+
+        /* ====================================================
+           MESSAGES
+        ==================================================== */
+        .AEC_message,
+        .AEC_error {
+            margin: 28px auto 0;
+            width: min(1180px, calc(100% - 34px));
+            padding: 15px 18px;
+            border-radius: 15px;
+            font-weight: 600;
+        }
+
+        .AEC_message {
+            background: #f1f8f2;
+            border: 1px solid #cfe6d1;
+            color: #315c38;
+        }
+
+        .AEC_error {
+            background: #fff1f1;
+            border: 1px solid #efcaca;
+            color: #8c2d38;
+        }
+
+        /* ====================================================
+           MAIN LAYOUT
+        ==================================================== */
+        .AEC_main {
+            padding: 44px 0 85px;
+        }
+
+        .AEC_layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.55fr) minmax(320px, 0.85fr);
+            gap: 26px;
+            align-items: start;
+        }
+
+        .AEC_panel {
+            background: rgba(255,255,255,0.92);
+            border: 1px solid var(--ae-border);
+            border-radius: var(--ae-radius);
+            box-shadow: var(--ae-shadow);
+            overflow: hidden;
+        }
+
+        .AEC_panel_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            padding: 24px 26px;
+            border-bottom: 1px solid var(--ae-border);
+        }
+
+        .AEC_panel_header h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 26px;
+        }
+
+        .AEC_panel_header span {
+            color: var(--ae-muted);
+            font-size: 13px;
+        }
+
+        /* ====================================================
+           CART ITEMS
+        ==================================================== */
+        .AEC_items {
+            padding: 10px 26px 26px;
+        }
+
+        .AEC_item {
+            display: grid;
+            grid-template-columns: 105px minmax(0, 1fr) auto;
+            gap: 18px;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--ae-border);
+        }
+
+        .AEC_item:last-child {
+            border-bottom: 0;
+        }
+
+        .AEC_item_image {
+            width: 105px;
+            height: 105px;
+            border-radius: 18px;
+            overflow: hidden;
+            background: var(--ae-cream);
+            border: 1px solid var(--ae-border);
+            display: grid;
+            place-items: center;
+            color: var(--ae-maroon);
+        }
+
+        .AEC_item_image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .AEC_item_category {
+            display: block;
+            color: var(--ae-maroon);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            margin-bottom: 7px;
+        }
+
+        .AEC_item h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 22px;
+            margin-bottom: 7px;
+        }
+
+        .AEC_item_price {
+            color: var(--ae-muted);
+            font-size: 13px;
+        }
+
+        .AEC_item_right {
+            text-align: right;
+        }
+
+        .AEC_line_total {
+            display: block;
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .AEC_quantity {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid var(--ae-border);
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--ae-ivory);
+        }
+
+        .AEC_quantity input {
+            width: 50px;
+            padding: 9px 4px;
+            border: 0;
+            outline: 0;
+            text-align: center;
+            color: var(--ae-text);
+            background: transparent;
+        }
+
+        .AEC_quantity button {
+            width: 35px;
+            height: 38px;
+            border: 0;
+            background: transparent;
+            color: var(--ae-maroon);
+        }
+
+        .AEC_remove {
+            display: inline-flex;
+            margin-top: 9px;
+            color: #9a5260;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .AEC_empty {
+            padding: 70px 25px;
+            text-align: center;
+        }
+
+        .AEC_empty_icon {
+            width: 78px;
+            height: 78px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: var(--ae-cream);
+            color: var(--ae-maroon);
+            font-size: 28px;
+        }
+
+        .AEC_empty h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            margin-bottom: 9px;
+        }
+
+        .AEC_empty p {
+            color: var(--ae-muted);
+            margin-bottom: 22px;
+        }
+
+        .AEC_btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 9px;
+            min-height: 46px;
+            padding: 0 18px;
+            border: 0;
+            border-radius: 13px;
+            background: var(--ae-maroon);
+            color: var(--ae-white);
+            font-weight: 700;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .AEC_btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(110,24,48,0.18);
+        }
+
+        .AEC_btn_secondary {
+            background: var(--ae-cream);
+            color: var(--ae-maroon);
+        }
+
+        /* ====================================================
+           SUMMARY
+        ==================================================== */
+        .AEC_summary {
+            position: sticky;
+            top: 24px;
+        }
+
+        .AEC_summary_body {
+            padding: 25px;
+        }
+
+        .AEC_total_line {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 11px 0;
+            color: var(--ae-muted);
+        }
+
+        .AEC_total_line strong {
+            color: var(--ae-text);
+        }
+
+        .AEC_grand {
+            margin-top: 10px;
+            padding-top: 18px;
+            border-top: 1px dashed var(--ae-border);
+            font-size: 22px;
+            color: var(--ae-maroon);
+        }
+
+        .AEC_summary .AEC_btn {
+            width: 100%;
+            margin-top: 16px;
+        }
+
+        .AEC_trust {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 9px;
+            margin-top: 18px;
+        }
+
+        .AEC_trust div {
+            padding: 12px 7px;
+            border-radius: 13px;
+            background: var(--ae-cream);
+            text-align: center;
+        }
+
+        .AEC_trust i {
+            display: block;
+            color: var(--ae-maroon);
+            margin-bottom: 5px;
+        }
+
+        .AEC_trust span {
+            display: block;
+            color: var(--ae-muted);
+            font-size: 10px;
+            line-height: 1.35;
+        }
+
+        /* ====================================================
+           CHECKOUT
+        ==================================================== */
+        .AEC_checkout {
+            margin-top: 26px;
+        }
+
+        .AEC_form {
+            padding: 25px;
+        }
+
+        .AEC_form_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .AEC_field.full {
+            grid-column: 1 / -1;
+        }
+
+        .AEC_field label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--ae-muted);
+        }
+
+        .AEC_field input,
+        .AEC_field textarea,
+        .AEC_field select {
+            width: 100%;
+            border: 1px solid var(--ae-border);
+            border-radius: 13px;
+            outline: none;
+            padding: 13px 14px;
+            background: var(--ae-ivory);
+            color: var(--ae-text);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .AEC_field textarea {
+            min-height: 105px;
+            resize: vertical;
+        }
+
+        .AEC_field input:focus,
+        .AEC_field textarea:focus,
+        .AEC_field select:focus {
+            border-color: var(--ae-champagne);
+            box-shadow: 0 0 0 4px rgba(216,181,106,0.12);
+        }
+
+        .AEC_checkout_note {
+            margin-top: 15px;
+            padding: 13px 14px;
+            border-radius: 13px;
+            background: var(--ae-cream);
+            color: var(--ae-muted);
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        /* ====================================================
+           RECEIPT MODAL / PRINT CHIT
+        ==================================================== */
+        .AEC_receipt_overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            background: rgba(50,25,35,0.68);
+            backdrop-filter: blur(9px);
+            overflow-y: auto;
+        }
+
+        .AEC_receipt_window {
+            width: min(570px, 100%);
+            animation: AEC_receipt_in 0.28s ease;
+        }
+
+        @keyframes AEC_receipt_in {
+            from {
+                opacity: 0;
+                transform: translateY(18px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .AEC_receipt_actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 9px;
+            margin-bottom: 12px;
+        }
+
+        .AEC_receipt {
+            position: relative;
+            background: #fff;
+            color: #222;
+            padding: 34px;
+            border-radius: 8px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.24);
+        }
+
+        .AEC_receipt::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            height: 20px;
+            background:
+                linear-gradient(135deg, transparent 7px, #fff 0) 0 0 / 14px 20px repeat-x;
+        }
+
+        .AEC_receipt_brand {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #bbb;
+        }
+
+        .AEC_receipt_brand .ae_mark {
+            width: 52px;
+            height: 52px;
+            margin: 0 auto 9px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--ae-maroon);
+            color: var(--ae-champagne-soft);
+            font-weight: 800;
+        }
+
+        .AEC_receipt_brand h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 27px;
+        }
+
+        .AEC_receipt_brand p {
+            color: #777;
+            font-size: 11px;
+            margin-top: 4px;
+        }
+
+        .AEC_receipt_meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 17px 0;
+            border-bottom: 1px dashed #bbb;
+            font-size: 12px;
+        }
+
+        .AEC_receipt_meta strong,
+        .AEC_receipt_meta span {
+            display: block;
+        }
+
+        .AEC_receipt_meta span {
+            color: #777;
+            margin-bottom: 3px;
+        }
+
+        .AEC_receipt_table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0;
+            font-size: 12px;
+        }
+
+        .AEC_receipt_table th,
+        .AEC_receipt_table td {
+            padding: 9px 3px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+        }
+
+        .AEC_receipt_table th:last-child,
+        .AEC_receipt_table td:last-child {
+            text-align: right;
+        }
+
+        .AEC_receipt_totals {
+            border-top: 1px dashed #bbb;
+            padding-top: 10px;
+        }
+
+        .AEC_receipt_total_line {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            font-size: 12px;
+        }
+
+        .AEC_receipt_total_line.grand {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--ae-maroon);
+            padding-top: 11px;
+        }
+
+        .AEC_receipt_customer {
+            margin-top: 18px;
+            padding: 13px;
+            border-radius: 8px;
+            background: #faf6f0;
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        .AEC_receipt_footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 17px;
+            border-top: 1px dashed #bbb;
+            color: #777;
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+        /* ====================================================
+           RESPONSIVE
+        ==================================================== */
+        @media (max-width: 900px) {
+            .AEC_layout {
+                grid-template-columns: 1fr;
+            }
+
+            .AEC_summary {
+                position: static;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .AEC_hero {
+                padding: 54px 0 42px;
+            }
+
+            .AEC_hero_inner {
+                display: block;
+            }
+
+            .AEC_cart_pill {
+                margin-top: 25px;
+                width: 150px;
+            }
+
+            .AEC_item {
+                grid-template-columns: 78px minmax(0, 1fr);
+            }
+
+            .AEC_item_image {
+                width: 78px;
+                height: 78px;
+            }
+
+            .AEC_item_right {
+                grid-column: 2;
+                text-align: left;
+            }
+
+            .AEC_form_grid {
+                grid-template-columns: 1fr;
+            }
+
+            .AEC_field.full {
+                grid-column: auto;
+            }
+
+            .AEC_receipt {
+                padding: 23px 18px;
+            }
+
+            .AEC_receipt_meta {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .AEC_container,
+            .AEC_message,
+            .AEC_error {
+                width: min(100% - 22px, 1180px);
+            }
+
+            .AEC_panel_header,
+            .AEC_items,
+            .AEC_form,
+            .AEC_summary_body {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .AEC_trust {
+                grid-template-columns: 1fr;
+            }
+
+            .AEC_receipt_overlay {
+                padding: 10px;
+            }
+        }
+
+        /* ====================================================
+           PRINT RECEIPT ONLY
+        ==================================================== */
+        @media print {
+            body * {
+                visibility: hidden !important;
+            }
+
+            .AEC_receipt_overlay,
+            .AEC_receipt_overlay * {
+                visibility: visible !important;
+            }
+
+            .AEC_receipt_overlay {
+                position: static;
+                display: block;
+                padding: 0;
+                background: #fff;
+                overflow: visible;
+            }
+
+            .AEC_receipt_window {
+                width: 100%;
+            }
+
+            .AEC_receipt_actions {
+                display: none !important;
+            }
+
+            .AEC_receipt {
+                width: 80mm;
+                margin: 0 auto;
+                padding: 7mm;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .AEC_receipt::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<?php include "header.php"; ?>
+
+<!-- ========================================================
+     PREMIUM CART HERO
+========================================================= -->
+<section class="AEC_hero">
+    <div class="AEC_container AEC_hero_inner">
+
+        <div>
+            <span class="AEC_kicker">
+                <i class="fa-solid fa-bag-shopping"></i>
+                Your Private Shopping Bag
+            </span>
+
+            <h1>Your Cart</h1>
+
+            <p>
+                Review your selected products, confirm your details,
+                place your order and receive a clean printable receipt.
+            </p>
+        </div>
+
+        <div class="AEC_cart_pill">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <strong><?php echo $cart_count; ?></strong>
+            <span>Item<?php echo $cart_count === 1 ? "" : "s"; ?> in bag</span>
+        </div>
+
+    </div>
+</section>
+
+<?php if ($cart_message !== ""): ?>
+    <div class="AEC_message">
+        <i class="fa-solid fa-circle-check"></i>
+        <?php echo ae_cart_escape($cart_message); ?>
+    </div>
+<?php endif; ?>
+
+<?php if ($checkout_error !== ""): ?>
+    <div class="AEC_error">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <?php echo ae_cart_escape($checkout_error); ?>
+    </div>
+<?php endif; ?>
+
+<main class="AEC_main">
+    <div class="AEC_container">
+
+        <?php if (!empty($cart_items)): ?>
+
+            <div class="AEC_layout">
+
+                <!-- CART -->
+                <section class="AEC_panel">
+
+                    <div class="AEC_panel_header">
+                        <div>
+                            <h2>Selected Items</h2>
+                            <span><?php echo $cart_count; ?> item(s) ready for checkout</span>
+                        </div>
+
+                        <a href="cart.php?clear=1" class="AEC_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                            Clear cart
+                        </a>
+                    </div>
+
+                    <form method="post">
+
+                        <div class="AEC_items">
+
+                            <?php foreach ($cart_items as $item): ?>
+
+                                <?php
+                                $item_id = (int)($item["id"] ?? 0);
+                                $item_name = (string)($item["name"] ?? "Product");
+                                $item_category = (string)($item["category"] ?? "Collection");
+                                $item_price = (float)($item["price"] ?? 0);
+                                $item_quantity = max(1, (int)($item["quantity"] ?? 1));
+                                $item_image = ae_cart_image($item["image"] ?? "");
+                                $item_total = $item_price * $item_quantity;
+                                ?>
+
+                                <article class="AEC_item">
+
+                                    <div class="AEC_item_image">
+                                        <?php if ($item_image !== ""): ?>
+                                            <img
+                                                src="<?php echo ae_cart_escape($item_image); ?>"
+                                                alt="<?php echo ae_cart_escape($item_name); ?>"
+                                            >
+                                        <?php else: ?>
+                                            <i class="fa-solid fa-box-open"></i>
+                                        <?php endif; ?>
+                                    </div>
+
+                                    <div>
+                                        <span class="AEC_item_category">
+                                            <?php echo ae_cart_escape($item_category); ?>
+                                        </span>
+
+                                        <h3>
+                                            <?php echo ae_cart_escape($item_name); ?>
+                                        </h3>
+
+                                        <span class="AEC_item_price">
+                                            <?php echo $currency; ?> <?php echo ae_cart_money($item_price); ?> each
+                                        </span>
+                                    </div>
+
+                                    <div class="AEC_item_right">
+                                        <strong class="AEC_line_total">
+                                            <?php echo $currency; ?> <?php echo ae_cart_money($item_total); ?>
+                                        </strong>
+
+                                        <div class="AEC_quantity">
+                                            <button
+                                                type="button"
+                                                onclick="changeQuantity(<?php echo $item_id; ?>, -1)"
+                                                aria-label="Decrease quantity"
+                                            >
+                                                <i class="fa-solid fa-minus"></i>
+                                            </button>
+
+                                            <input
+                                                type="number"
+                                                min="1"
+                                                max="99"
+                                                name="quantity[<?php echo $item_id; ?>]"
+                                                id="quantity_<?php echo $item_id; ?>"
+                                                value="<?php echo $item_quantity; ?>"
+                                            >
+
+                                            <button
+                                                type="button"
+                                                onclick="changeQuantity(<?php echo $item_id; ?>, 1)"
+                                                aria-label="Increase quantity"
+                                            >
+                                                <i class="fa-solid fa-plus"></i>
+                                            </button>
+                                        </div>
+
+                                        <a
+                                            href="cart.php?remove=<?php echo $item_id; ?>"
+                                            class="AEC_remove"
+                                        >
+                                            Remove
+                                        </a>
+                                    </div>
+
+                                </article>
+
+                            <?php endforeach; ?>
+
+                            <button type="submit" name="update_cart" class="AEC_btn AEC_btn_secondary">
+                                <i class="fa-solid fa-rotate"></i>
+                                Update Cart
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+                <!-- SUMMARY -->
+                <aside class="AEC_panel AEC_summary">
+
+                    <div class="AEC_panel_header">
+                        <div>
+                            <h2>Order Summary</h2>
+                            <span>Before final confirmation</span>
+                        </div>
+                    </div>
+
+                    <div class="AEC_summary_body">
+
+                        <div class="AEC_total_line">
+                            <span>Subtotal</span>
+                            <strong><?php echo $currency; ?> <?php echo ae_cart_money($subtotal); ?></strong>
+                        </div>
+
+                        <div class="AEC_total_line">
+                            <span>Delivery</span>
+                            <strong>
+                                <?php echo $delivery_fee > 0 ? $currency . " " . ae_cart_money($delivery_fee) : "FREE"; ?>
+                            </strong>
+                        </div>
+
+                        <div class="AEC_total_line AEC_grand">
+                            <span>Total</span>
+                            <strong><?php echo $currency; ?> <?php echo ae_cart_money($grand_total); ?></strong>
+                        </div>
+
+                        <a href="#checkout" class="AEC_btn">
+                            <i class="fa-solid fa-lock"></i>
+                            Continue to Checkout
+                        </a>
+
+                        <div class="AEC_trust">
+                            <div>
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Secure Order</span>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-receipt"></i>
+                                <span>Instant Receipt</span>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-headset"></i>
+                                <span>Support Ready</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+            <!-- CHECKOUT -->
+            <section class="AEC_panel AEC_checkout" id="checkout">
+
+                <div class="AEC_panel_header">
+                    <div>
+                        <h2>Checkout Details</h2>
+                        <span>These details will appear on the receipt.</span>
+                    </div>
+                </div>
+
+                <form method="post" class="AEC_form">
+
+                    <div class="AEC_form_grid">
+
+                        <div class="AEC_field">
+                            <label for="customer_name">Customer Name *</label>
+                            <input
+                                type="text"
+                                id="customer_name"
+                                name="customer_name"
+                                placeholder="Your full name"
+                                required
+                            >
+                        </div>
+
+                        <div class="AEC_field">
+                            <label for="customer_phone">Phone Number *</label>
+                            <input
+                                type="tel"
+                                id="customer_phone"
+                                name="customer_phone"
+                                placeholder="03XX XXXXXXX"
+                                required
+                            >
+                        </div>
+
+                        <div class="AEC_field">
+                            <label for="customer_email">Email Address</label>
+                            <input
+                                type="email"
+                                id="customer_email"
+                                name="customer_email"
+                                placeholder="you@example.com"
+                            >
+                        </div>
+
+                        <div class="AEC_field">
+                            <label for="payment_method">Payment Method</label>
+                            <select id="payment_method" name="payment_method">
+                                <option value="Cash on Delivery">Cash on Delivery</option>
+                            </select>
+                        </div>
+
+                        <div class="AEC_field full">
+                            <label for="customer_address">Complete Delivery Address *</label>
+                            <textarea
+                                id="customer_address"
+                                name="customer_address"
+                                placeholder="House / street / area / city / province"
+                                required
+                            ></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="AEC_checkout_note">
+                        <i class="fa-solid fa-circle-info"></i>
+                        Your order will be saved with an order number, exact date,
+                        database time, customer details, purchased items and total amount.
+                        After placing the order, a printable receipt will appear automatically.
+                    </div>
+
+                    <button type="submit" name="place_order" class="AEC_btn" style="margin-top:18px; width:100%;">
+                        <i class="fa-solid fa-check"></i>
+                        Place Order & Generate Receipt
+                    </button>
+
+                </form>
+
+            </section>
+
+        <?php else: ?>
+
+            <section class="AEC_panel AEC_empty">
+                <div class="AEC_empty_icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+
+                <h3>Your shopping bag is empty</h3>
+
+                <p>
+                    Add something beautiful from the Awaisi Emporium collection
+                    and it will appear here.
+                </p>
+
+                <a href="products.php" class="AEC_btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Continue Shopping
+                </a>
+            </section>
+
+        <?php endif; ?>
+
+    </div>
+</main>
 
 <?php include "footer.php"; ?>
+
+<?php if ($show_receipt && !empty($receipt["order"])): ?>
+
+    <?php $order = $receipt["order"]; ?>
+
+    <div class="AEC_receipt_overlay" id="receiptOverlay">
+
+        <div class="AEC_receipt_window">
+
+            <div class="AEC_receipt_actions">
+                <button type="button" class="AEC_btn" onclick="printReceipt()">
+                    <i class="fa-solid fa-print"></i>
+                    Print Receipt
+                </button>
+
+                <button type="button" class="AEC_btn AEC_btn_secondary" onclick="closeReceipt()">
+                    <i class="fa-solid fa-xmark"></i>
+                    Close
+                </button>
+            </div>
+
+            <div class="AEC_receipt" id="printReceipt">
+
+                <div class="AEC_receipt_brand">
+                    <div class="ae_mark">AE</div>
+                    <h2><?php echo ae_cart_escape($store_name); ?></h2>
+                    <p>PREMIUM FAMILY STORE</p>
+                </div>
+
+                <div class="AEC_receipt_meta">
+                    <div>
+                        <span>Receipt / Order No.</span>
+                        <strong><?php echo ae_cart_escape($order["order_number"]); ?></strong>
+                    </div>
+
+                    <div>
+                        <span>Date & Time</span>
+                        <strong><?php echo date("d M Y, h:i A", strtotime($order["created_at"])); ?></strong>
+                    </div>
+
+                    <div>
+                        <span>Status</span>
+                        <strong><?php echo ae_cart_escape(ucfirst($order["status"])); ?></strong>
+                    </div>
+
+                    <div>
+                        <span>Payment</span>
+                        <strong><?php echo ae_cart_escape($order["payment_method"]); ?></strong>
+                    </div>
+                </div>
+
+                <table class="AEC_receipt_table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <?php foreach ($receipt["items"] as $receipt_item): ?>
+                            <tr>
+                                <td>
+                                    <?php echo ae_cart_escape($receipt_item["product_name"]); ?><br>
+                                    <small><?php echo $currency; ?> <?php echo ae_cart_money($receipt_item["price"]); ?> each</small>
+                                </td>
+                                <td><?php echo (int)$receipt_item["quantity"]; ?></td>
+                                <td><?php echo $currency; ?> <?php echo ae_cart_money($receipt_item["line_total"]); ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+
+                <div class="AEC_receipt_totals">
+                    <div class="AEC_receipt_total_line">
+                        <span>Subtotal</span>
+                        <strong><?php echo $currency; ?> <?php echo ae_cart_money($order["subtotal"]); ?></strong>
+                    </div>
+
+                    <div class="AEC_receipt_total_line">
+                        <span>Delivery</span>
+                        <strong>
+                            <?php echo (float)$order["delivery_fee"] > 0
+                                ? $currency . " " . ae_cart_money($order["delivery_fee"])
+                                : "FREE"; ?>
+                        </strong>
+                    </div>
+
+                    <div class="AEC_receipt_total_line grand">
+                        <span>Grand Total</span>
+                        <strong><?php echo $currency; ?> <?php echo ae_cart_money($order["total"]); ?></strong>
+                    </div>
+                </div>
+
+                <div class="AEC_receipt_customer">
+                    <strong>Customer Details</strong><br>
+                    <?php echo ae_cart_escape($order["customer_name"]); ?><br>
+                    <?php echo ae_cart_escape($order["customer_phone"]); ?><br>
+                    <?php if (trim($order["customer_email"]) !== ""): ?>
+                        <?php echo ae_cart_escape($order["customer_email"]); ?><br>
+                    <?php endif; ?>
+                    <?php echo nl2br(ae_cart_escape($order["customer_address"])); ?>
+                </div>
+
+                <div class="AEC_receipt_footer">
+                    Thank you for shopping with <?php echo ae_cart_escape($store_name); ?>.<br>
+                    <?php echo ae_cart_escape($store_phone); ?> · <?php echo ae_cart_escape($store_email); ?><br>
+                    Please keep this receipt for your order reference.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<?php endif; ?>
+
+<script>
+/* ============================================================
+   QUANTITY CONTROLS
+   ============================================================ */
+function changeQuantity(productId, change) {
+
+    const input = document.getElementById("quantity_" + productId);
+
+    if (!input) {
+        return;
+    }
+
+    let value = parseInt(input.value || "1", 10);
+    value += change;
+    value = Math.max(1, Math.min(99, value));
+
+    input.value = value;
+}
+
+/* ============================================================
+   RECEIPT
+   ============================================================ */
+function printReceipt() {
+    window.print();
+}
+
+function closeReceipt() {
+    const overlay = document.getElementById("receiptOverlay");
+
+    if (overlay) {
+        overlay.remove();
+    }
+
+    window.history.replaceState({}, document.title, "cart.php");
+}
+
+/* Escape closes the receipt. */
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        closeReceipt();
+    }
+});
+</script>
+
+</body>
+</html>
