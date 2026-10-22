@@ -1,0 +1,2837 @@
+<!-- <?php
+
+/*
+|--------------------------------------------------------------------------
+| AWAISI EMPORIUM
+| PREMIUM HOME PAGE
+|--------------------------------------------------------------------------
+| Header and Footer are separate files.
+|--------------------------------------------------------------------------
+*/
+
+require_once "connection.php";
+
+/*
+|--------------------------------------------------------------------------
+| PRODUCT DATA
+|--------------------------------------------------------------------------
+| Homepage latest products database se automatically load karegi.
+|--------------------------------------------------------------------------
+*/
+
+$products = [];
+$totalProducts = 0;
+
+/*
+| Check whether products table exists
+*/
+
+$tableCheck = $conn->query("SHOW TABLES LIKE 'products'");
+
+if ($tableCheck && $tableCheck->num_rows > 0) {
+
+    /*
+    | Total Products
+    */
+
+    $countQuery = $conn->query(
+        "SELECT COUNT(*) AS total FROM products"
+    );
+
+    if ($countQuery) {
+
+        $countRow = $countQuery->fetch_assoc();
+
+        $totalProducts = (int) ($countRow["total"] ?? 0);
+    }
+
+
+    /*
+    | Latest Products
+    */
+
+    $productQuery = $conn->query(
+        "SELECT *
+         FROM products
+         ORDER BY id DESC
+         LIMIT 8"
+    );
+
+    if ($productQuery) {
+
+        while ($row = $productQuery->fetch_assoc()) {
+
+            $products[] = $row;
+        }
+    }
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| SAFE OUTPUT
+|--------------------------------------------------------------------------
+*/
+
+function ae_escape($value)
+{
+    return htmlspecialchars(
+        (string) $value,
+        ENT_QUOTES,
+        "UTF-8"
+    );
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| PRODUCT IMAGE
+|--------------------------------------------------------------------------
+*/
+
+function ae_image($image)
+{
+    $image = trim((string) $image);
+
+    if ($image === "") {
+        return "";
+    }
+
+    /*
+    | Full URL
+    */
+
+    if (
+        str_starts_with($image, "http://") ||
+        str_starts_with($image, "https://")
+    ) {
+        return $image;
+    }
+
+    /*
+    | Already has uploads path
+    */
+
+    if (
+        str_starts_with($image, "uploads/")
+    ) {
+        return $image;
+    }
+
+    /*
+    | Only filename stored in database
+    */
+
+    return "uploads/products/" . $image;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| GET PRODUCT VALUE SAFELY
+|--------------------------------------------------------------------------
+*/
+
+function ae_product_value($product, $keys, $default = "")
+{
+    foreach ($keys as $key) {
+
+        if (
+            isset($product[$key]) &&
+            $product[$key] !== ""
+        ) {
+            return $product[$key];
+        }
+    }
+
+    return $default;
+}
+
+?> -->
+
+<?php include "header.php"; ?>
+
+
+<main class="AE_home">
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="AE_hero">
+
+        <div class="AE_heroGlow AE_glowOne"></div>
+        <div class="AE_heroGlow AE_glowTwo"></div>
+
+
+        <div class="AE_heroInner">
+
+
+            <div class="AE_heroContent">
+
+                <div class="AE_eyebrow">
+
+                    <span></span>
+
+                    AWAISI EMPORIUM
+
+                </div>
+
+
+                <h1>
+
+                    Quality.
+                    <span>Trust.</span>
+                    Variety.
+
+                </h1>
+
+
+                <p>
+
+                    Discover a carefully selected collection
+                    of products for everyday life, family,
+                    home and more — all in one convenient
+                    shopping destination.
+
+                </p>
+
+
+                <div class="AE_heroButtons">
+
+                    <a
+                        href="products.php"
+                        class="AE_btn AE_btnPrimary"
+                    >
+
+                        Shop Products
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a
+                        href="categories.php"
+                        class="AE_btn AE_btnSecondary"
+                    >
+
+                        Explore Categories
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="AE_heroStats">
+
+
+                    <div>
+
+                        <strong>
+                            <?php echo $totalProducts; ?>+
+                        </strong>
+
+                        <span>
+                            Products
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            7+
+                        </strong>
+
+                        <span>
+                            Collections
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            100%
+                        </strong>
+
+                        <span>
+                            Customer Focus
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO VISUAL -->
+
+            <div class="AE_heroVisual">
+
+
+                <div class="AE_visualCircle">
+
+                    <div class="AE_visualInner">
+
+                        <div class="AE_bigLogo">
+                            AE
+                        </div>
+
+                        <h2>
+                            Awaisi Emporium
+                        </h2>
+
+                        <p>
+                            PREMIUM FAMILY STORE
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="AE_floatCard AE_floatTop">
+
+                    <div class="AE_floatIcon">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Quality First
+                        </strong>
+
+                        <span>
+                            Carefully selected
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="AE_floatCard AE_floatBottom">
+
+                    <div class="AE_floatIcon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Easy Shopping
+                        </strong>
+
+                        <span>
+                            Simple & convenient
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUICK CATEGORIES
+    ====================================================== -->
+
+    <section class="AE_section" id="categories">
+
+        <div class="AE_sectionHeading">
+
+            <div>
+
+                <span class="AE_sectionLabel">
+                    EXPLORE COLLECTIONS
+                </span>
+
+                <h2>
+                    Shop By Category
+                </h2>
+
+            </div>
+
+
+            <a
+                href="categories.php"
+                class="AE_textLink"
+            >
+
+                View All Categories
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="AE_categoryGrid">
+
+
+            <a
+                href="categories.php?category=toys"
+                class="AE_categoryCard"
+            >
+
+                <div class="AE_categoryIcon">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                </div>
+
+                <div>
+
+                    <h3>
+                        Toys
+                    </h3>
+
+                    <p>
+                        Fun for little ones
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square AE_cardArrow"></i>
+
+            </a>
+
+
+            <a
+                href="categories.php?category=stuff-toys"
+                class="AE_categoryCard"
+            >
+
+                <div class="AE_categoryIcon">
+                    <i class="fa-solid fa-gift"></i>
+                </div>
+
+                <div>
+
+                    <h3>
+                        Stuff Toys
+                    </h3>
+
+                    <p>
+                        Cute & playful collection
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square AE_cardArrow"></i>
+
+            </a>
+
+
+            <a
+                href="categories.php?category=electric-cars"
+                class="AE_categoryCard"
+            >
+
+                <div class="AE_categoryIcon">
+                    <i class="fa-solid fa-car"></i>
+                </div>
+
+                <div>
+
+                    <h3>
+                        Electric Cars
+                    </h3>
+
+                    <p>
+                        Exciting rides for kids
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square AE_cardArrow"></i>
+
+            </a>
+
+
+            <a
+                href="categories.php?category=school-picnic-bags"
+                class="AE_categoryCard"
+            >
+
+                <div class="AE_categoryIcon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+
+                <div>
+
+                    <h3>
+                        School & Picnic Bags
+                    </h3>
+
+                    <p>
+                        Practical everyday bags
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square AE_cardArrow"></i>
+
+            </a>
+
+
+            <a
+                href="categories.php?category=crockery"
+                class="AE_categoryCard"
+            >
+
+                <div class="AE_categoryIcon">
+                    <i class="fa-solid fa-mug-hot"></i>
+                </div>
+
+                <div>
+
+                    <h3>
+                        Crockery
+                    </h3>
+
+                    <p>
+                        Beautiful home essentials
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square AE_cardArrow"></i>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PRODUCTS
+    ====================================================== -->
+
+    <section class="AE_productsSection">
+
+        <div class="AE_section AE_productsInner">
+
+
+            <div class="AE_sectionHeading">
+
+                <div>
+
+                    <span class="AE_sectionLabel">
+                        OUR COLLECTION
+                    </span>
+
+                    <h2>
+                        Latest Products
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="products.php"
+                    class="AE_textLink"
+                >
+
+                    View All Products
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="AE_productGrid">
+
+
+                <?php if (!empty($products)): ?>
+
+
+                    <?php foreach ($products as $product): ?>
+
+
+                        <?php
+
+                        $productId =
+                            (int) ae_product_value(
+                                $product,
+                                ["id"],
+                                0
+                            );
+
+
+                        $name =
+                            ae_product_value(
+                                $product,
+                                ["name", "product_name", "title"],
+                                "Product"
+                            );
+
+
+                        $category =
+                            ae_product_value(
+                                $product,
+                                ["category", "category_name"],
+                                "Collection"
+                            );
+
+
+                        $description =
+                            ae_product_value(
+                                $product,
+                                ["description", "details"],
+                                "Quality product from Awaisi Emporium."
+                            );
+
+
+                        $price =
+                            ae_product_value(
+                                $product,
+                                ["price", "product_price"],
+                                0
+                            );
+
+
+                        $image =
+                            ae_product_value(
+                                $product,
+                                ["image", "image_name", "product_image"],
+                                ""
+                            );
+
+
+                        $imagePath =
+                            ae_image($image);
+
+                        ?>
+
+
+                        <article class="AE_productCard">
+
+
+                            <a
+                                href="products.php?id=<?php echo $productId; ?>"
+                                class="AE_productImage"
+                            >
+
+
+                                <?php if ($imagePath !== ""): ?>
+
+                                    <img
+                                        src="<?php echo ae_escape($imagePath); ?>"
+                                        alt="<?php echo ae_escape($name); ?>"
+                                        loading="lazy"
+                                    >
+
+                                <?php else: ?>
+
+                                    <div class="AE_noImage">
+
+                                        <i class="fa-solid fa-image"></i>
+
+                                    </div>
+
+                                <?php endif; ?>
+
+
+                                <span class="AE_productBadge">
+                                    New
+                                </span>
+
+
+                            </a>
+
+
+                            <div class="AE_productInfo">
+
+
+                                <span class="AE_productCategory">
+
+                                    <?php
+                                    echo ae_escape($category);
+                                    ?>
+
+                                </span>
+
+
+                                <h3>
+
+                                    <?php
+                                    echo ae_escape($name);
+                                    ?>
+
+                                </h3>
+
+
+                                <p>
+
+                                    <?php
+                                    echo ae_escape($description);
+                                    ?>
+
+                                </p>
+
+
+                                <div class="AE_productBottom">
+
+
+                                    <strong class="AE_price">
+
+                                        <small>
+                                            PKR
+                                        </small>
+
+                                        <?php
+                                        echo number_format(
+                                            (float) $price
+                                        );
+                                        ?>
+
+                                    </strong>
+
+
+                                    <a
+                                        href="products.php?id=<?php echo $productId; ?>"
+                                        class="AE_productArrow"
+                                        aria-label="View Product"
+                                    >
+
+                                        <i class="fa-solid fa-arrow-right"></i>
+
+                                    </a>
+
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                    <?php endforeach; ?>
+
+
+                <?php else: ?>
+
+
+                    <div class="AE_emptyProducts">
+
+                        <div class="AE_emptyIcon">
+
+                            <i class="fa-solid fa-box-open"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Products Coming Soon
+                        </h3>
+
+
+                        <p>
+
+                            New products added through the
+                            admin dashboard will automatically
+                            appear here.
+
+                        </p>
+
+
+                        <a
+                            href="products.php"
+                            class="AE_btn AE_btnPrimary"
+                        >
+
+                            Browse Products
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                <?php endif; ?>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WHY AWAISI EMPORIUM
+    ====================================================== -->
+
+    <section class="AE_section">
+
+
+        <div class="AE_sectionHeading AE_centerHeading">
+
+            <div>
+
+                <span class="AE_sectionLabel">
+                    THE AWAISI EXPERIENCE
+                </span>
+
+                <h2>
+                    Made For Better Shopping
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="AE_featureGrid">
+
+
+            <div class="AE_featureCard">
+
+                <div class="AE_featureIcon">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <h3>
+                    Quality Products
+                </h3>
+
+                <p>
+                    Carefully selected products with
+                    quality and value in mind.
+                </p>
+
+            </div>
+
+
+            <div class="AE_featureCard">
+
+                <div class="AE_featureIcon">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+                <h3>
+                    Wide Collection
+                </h3>
+
+                <p>
+                    Explore different collections and
+                    categories from one place.
+                </p>
+
+            </div>
+
+
+            <div class="AE_featureCard">
+
+                <div class="AE_featureIcon">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </div>
+
+                <h3>
+                    Easy Shopping
+                </h3>
+
+                <p>
+                    Find products quickly with a simple
+                    and convenient shopping experience.
+                </p>
+
+            </div>
+
+
+            <div class="AE_featureCard">
+
+                <div class="AE_featureIcon">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                </div>
+
+                <h3>
+                    Customer Support
+                </h3>
+
+                <p>
+                    Get help through our dedicated
+                    customer support section.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PREMIUM CTA
+    ====================================================== -->
+
+    <section class="AE_cta">
+
+        <div class="AE_ctaGlow"></div>
+
+
+        <div class="AE_ctaContent">
+
+            <span>
+                AWAISI EMPORIUM
+            </span>
+
+            <h2>
+                Discover something
+                you'll love.
+            </h2>
+
+            <p>
+
+                Explore our complete collection and find
+                quality products for your home, family
+                and everyday needs.
+
+            </p>
+
+
+            <div class="AE_ctaButtons">
+
+
+                <a
+                    href="products.php"
+                    class="AE_btn AE_btnLight"
+                >
+
+                    Explore Products
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a
+                    href="contact.php"
+                    class="AE_ctaContact"
+                >
+
+                    Need Help?
+
+                    <i class="fa-solid fa-headset"></i>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="AE_ctaLogo">
+            AE
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<?php include "footer.php"; ?>
+
+
+<style>
+
+/* =========================================================
+   AWAISI EMPORIUM — HOME PAGE
+   All classes are isolated with AE_
+========================================================= */
+
+.AE_home {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    color: #321923;
+
+    background: #fffdf8;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.AE_hero {
+
+    position: relative;
+
+    min-height: 670px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(216,181,106,.18),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(110,24,48,.09),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fffdf8,
+            #f8eee3 58%,
+            #f0dfcf
+        );
+
+}
+
+
+.AE_heroInner {
+
+    width: 100%;
+
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding:
+        75px 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items: center;
+
+    gap: 65px;
+
+}
+
+
+.AE_heroGlow {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(2px);
+
+}
+
+
+.AE_glowOne {
+
+    width: 300px;
+
+    height: 300px;
+
+    right: -100px;
+
+    top: -80px;
+
+    background:
+        rgba(216,181,106,.09);
+
+}
+
+
+.AE_glowTwo {
+
+    width: 250px;
+
+    height: 250px;
+
+    left: -130px;
+
+    bottom: -120px;
+
+    background:
+        rgba(110,24,48,.06);
+
+}
+
+
+/* HERO CONTENT */
+
+.AE_heroContent {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.AE_eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #9a713d;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+.AE_eyebrow span {
+
+    width: 28px;
+
+    height: 2px;
+
+    background: #d8b56a;
+
+}
+
+
+.AE_heroContent h1 {
+
+    max-width: 650px;
+
+    margin: 18px 0 0;
+
+    color: #42101f;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(48px, 6vw, 76px);
+
+    line-height: 1.03;
+
+    letter-spacing: -2px;
+
+}
+
+
+.AE_heroContent h1 span {
+
+    display: block;
+
+    color: #9a713d;
+
+}
+
+
+.AE_heroContent > p {
+
+    max-width: 560px;
+
+    margin-top: 23px;
+
+    color: #806a70;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+}
+
+
+/* BUTTONS */
+
+.AE_heroButtons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+}
+
+
+.AE_btn {
+
+    min-height: 49px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding:
+        0 21px;
+
+    border-radius: 8px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+
+}
+
+
+.AE_btnPrimary {
+
+    color: #fff;
+
+    background: #6e1830;
+
+    box-shadow:
+        0 12px 30px
+        rgba(110,24,48,.18);
+
+}
+
+
+.AE_btnPrimary:hover {
+
+    color: #fff;
+
+    background: #42101f;
+
+    transform: translateY(-3px);
+
+}
+
+
+.AE_btnSecondary {
+
+    color: #6e1830;
+
+    background: rgba(255,255,255,.60);
+
+    border:
+        1px solid
+        rgba(110,24,48,.18);
+
+}
+
+
+.AE_btnSecondary:hover {
+
+    color: #42101f;
+
+    border-color: #d8b56a;
+
+    background: #fff;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* HERO STATS */
+
+.AE_heroStats {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 35px;
+
+    margin-top: 40px;
+
+}
+
+
+.AE_heroStats div {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.AE_heroStats strong {
+
+    color: #42101f;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 24px;
+
+}
+
+
+.AE_heroStats span {
+
+    margin-top: 3px;
+
+    color: #9a898c;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.2px;
+
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.AE_heroVisual {
+
+    min-height: 500px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.AE_visualCircle {
+
+    width: min(450px, 90vw);
+
+    aspect-ratio: 1;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 45%,
+            #fff,
+            #ead8c3 68%,
+            #d8b56a
+        );
+
+    border:
+        1px solid
+        rgba(216,181,106,.55);
+
+    box-shadow:
+        0 35px 80px
+        rgba(66,16,31,.14);
+
+}
+
+
+.AE_visualCircle::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 20px;
+
+    border:
+        1px solid
+        rgba(110,24,48,.12);
+
+    border-radius: 50%;
+
+}
+
+
+.AE_visualCircle::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 42px;
+
+    border:
+        1px dashed
+        rgba(110,24,48,.12);
+
+    border-radius: 50%;
+
+}
+
+
+.AE_visualInner {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+}
+
+
+.AE_bigLogo {
+
+    width: 105px;
+
+    height: 105px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        2px solid
+        #d8b56a;
+
+    border-radius: 28px;
+
+    color: #d8b56a;
+
+    background: #6e1830;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 15px 40px
+        rgba(66,16,31,.18);
+
+}
+
+
+.AE_visualInner h2 {
+
+    margin-top: 18px;
+
+    color: #42101f;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 28px;
+
+}
+
+
+.AE_visualInner p {
+
+    margin-top: 6px;
+
+    color: #9a713d;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+}
+
+
+/* FLOATING CARDS */
+
+.AE_floatCard {
+
+    position: absolute;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        12px 15px;
+
+    border:
+        1px solid
+        rgba(216,181,106,.35);
+
+    border-radius: 11px;
+
+    background:
+        rgba(255,255,255,.88);
+
+    box-shadow:
+        0 18px 40px
+        rgba(66,16,31,.12);
+
+    backdrop-filter:
+        blur(12px);
+
+}
+
+
+.AE_floatTop {
+
+    top: 48px;
+
+    right: -3px;
+
+}
+
+
+.AE_floatBottom {
+
+    left: -5px;
+
+    bottom: 48px;
+
+}
+
+
+.AE_floatIcon {
+
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    color: #9a713d;
+
+    background: #f7eee2;
+
+}
+
+
+.AE_floatCard strong {
+
+    display: block;
+
+    color: #42101f;
+
+    font-size: 10px;
+
+}
+
+
+.AE_floatCard span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #9a898c;
+
+    font-size: 8px;
+
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.AE_section {
+
+    width: 100%;
+
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding:
+        90px 30px;
+
+}
+
+
+.AE_sectionHeading {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.AE_sectionLabel {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #9a713d;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+}
+
+
+.AE_sectionHeading h2 {
+
+    margin: 0;
+
+    color: #42101f;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(30px, 4vw, 43px);
+
+}
+
+
+.AE_textLink {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #6e1830;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: .2s ease;
+
+}
+
+
+.AE_textLink:hover {
+
+    color: #9a713d;
+
+    gap: 12px;
+
+}
+
+
+.AE_centerHeading {
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+.AE_categoryGrid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.AE_categoryCard {
+
+    min-height: 185px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 22px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        #eadbd0;
+
+    border-radius: 15px;
+
+    color: #321923;
+
+    background: #fff;
+
+    box-shadow:
+        0 10px 30px
+        rgba(66,16,31,.045);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+
+}
+
+
+.AE_categoryCard:hover {
+
+    color: #321923;
+
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(216,181,106,.70);
+
+    box-shadow:
+        0 20px 45px
+        rgba(66,16,31,.10);
+
+}
+
+
+.AE_categoryIcon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: #9a713d;
+
+    background: #f7eee2;
+
+}
+
+
+.AE_categoryCard h3 {
+
+    margin-top: 20px;
+
+    color: #42101f;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 16px;
+
+}
+
+
+.AE_categoryCard p {
+
+    margin-top: 5px;
+
+    color: #9a898c;
+
+    font-size: 9px;
+
+}
+
+
+.AE_cardArrow {
+
+    position: absolute;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    color: #d8b56a;
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.AE_productsSection {
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8f0e6,
+            #f5eadd
+        );
+
+}
+
+
+.AE_productsInner {
+
+    max-width: 1240px;
+
+}
+
+
+.AE_productGrid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.AE_productCard {
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        #eadbd0;
+
+    border-radius: 15px;
+
+    background: #fffdf9;
+
+    box-shadow:
+        0 10px 28px
+        rgba(66,16,31,.05);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.AE_productCard:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 22px 45px
+        rgba(66,16,31,.12);
+
+}
+
+
+.AE_productImage {
+
+    height: 245px;
+
+    position: relative;
+
+    display: block;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f6ecdf,
+            #ead8c4
+        );
+
+}
+
+
+.AE_productImage img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .5s ease;
+
+}
+
+
+.AE_productCard:hover
+.AE_productImage img {
+
+    transform: scale(1.06);
+
+}
+
+
+.AE_noImage {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #b28a55;
+
+    font-size: 35px;
+
+}
+
+
+.AE_productBadge {
+
+    position: absolute;
+
+    top: 13px;
+
+    left: 13px;
+
+    padding:
+        6px 9px;
+
+    border-radius: 5px;
+
+    color: #fff;
+
+    background: #6e1830;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: .8px;
+
+}
+
+
+.AE_productInfo {
+
+    padding: 18px;
+
+}
+
+
+.AE_productCategory {
+
+    color: #9a713d;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.3px;
+
+}
+
+
+.AE_productInfo h3 {
+
+    margin: 7px 0 0;
+
+    color: #42101f;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 18px;
+
+}
+
+
+.AE_productInfo p {
+
+    height: 38px;
+
+    overflow: hidden;
+
+    margin: 7px 0 0;
+
+    color: #938083;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+}
+
+
+.AE_productBottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 16px;
+
+    padding-top: 13px;
+
+    border-top:
+        1px solid
+        #eee2d7;
+
+}
+
+
+.AE_price {
+
+    color: #6e1830;
+
+    font-size: 16px;
+
+}
+
+
+.AE_price small {
+
+    margin-right: 3px;
+
+    color: #9a898c;
+
+    font-size: 7px;
+
+}
+
+
+.AE_productArrow {
+
+    width: 36px;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    color: #fff;
+
+    background: #6e1830;
+
+    transition: .2s ease;
+
+}
+
+
+.AE_productArrow:hover {
+
+    color: #fff;
+
+    background: #42101f;
+
+    transform: scale(1.08);
+
+}
+
+
+/* EMPTY */
+
+.AE_emptyProducts {
+
+    grid-column:
+        1 / -1;
+
+    padding:
+        65px 25px;
+
+    text-align: center;
+
+    border:
+        1px dashed
+        #d6c3b5;
+
+    border-radius: 16px;
+
+    background:
+        rgba(255,255,255,.55);
+
+}
+
+
+.AE_emptyIcon {
+
+    color: #b28a55;
+
+    font-size: 32px;
+
+}
+
+
+.AE_emptyProducts h3 {
+
+    margin-top: 13px;
+
+    color: #42101f;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 24px;
+
+}
+
+
+.AE_emptyProducts p {
+
+    max-width: 480px;
+
+    margin:
+        8px auto 22px;
+
+    color: #8d7a7d;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.AE_featureGrid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 17px;
+
+}
+
+
+.AE_featureCard {
+
+    padding: 27px;
+
+    border:
+        1px solid
+        #eadbd0;
+
+    border-radius: 14px;
+
+    background: #fff;
+
+    transition: .25s ease;
+
+}
+
+
+.AE_featureCard:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(66,16,31,.07);
+
+}
+
+
+.AE_featureIcon {
+
+    width: 46px;
+
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: #9a713d;
+
+    background: #f7eee2;
+
+}
+
+
+.AE_featureCard h3 {
+
+    margin-top: 18px;
+
+    color: #42101f;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 17px;
+
+}
+
+
+.AE_featureCard p {
+
+    margin-top: 8px;
+
+    color: #8d7b7e;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.AE_cta {
+
+    width:
+        calc(100% - 60px);
+
+    max-width: 1180px;
+
+    min-height: 330px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin:
+        0 auto 90px;
+
+    padding:
+        60px 55px;
+
+    border-radius: 22px;
+
+    color: #fff;
+
+    background:
+
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(216,181,106,.20),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            120deg,
+            #42101f,
+            #6e1830
+        );
+
+}
+
+
+.AE_ctaGlow {
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    right: -150px;
+
+    bottom: -190px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(216,181,106,.25);
+
+}
+
+
+.AE_ctaContent {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.AE_ctaContent > span {
+
+    color: #d8b56a;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+}
+
+
+.AE_ctaContent h2 {
+
+    max-width: 650px;
+
+    margin-top: 9px;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(32px, 4vw, 46px);
+
+    line-height: 1.1;
+
+}
+
+
+.AE_ctaContent p {
+
+    max-width: 530px;
+
+    margin-top: 11px;
+
+    color:
+        rgba(255,255,255,.60);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+}
+
+
+.AE_ctaButtons {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin-top: 23px;
+
+}
+
+
+.AE_btnLight {
+
+    color: #42101f;
+
+    background: #d8b56a;
+
+}
+
+
+.AE_btnLight:hover {
+
+    color: #42101f;
+
+    background: #fff;
+
+    transform: translateY(-3px);
+
+}
+
+
+.AE_ctaContact {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color:
+        rgba(255,255,255,.72);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+.AE_ctaContact:hover {
+
+    color: #d8b56a;
+
+}
+
+
+.AE_ctaLogo {
+
+    position: absolute;
+
+    right: 75px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    color:
+        rgba(216,181,106,.08);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 190px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .AE_heroInner {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+
+    .AE_heroContent > p {
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+
+    .AE_eyebrow {
+
+        justify-content: center;
+
+    }
+
+
+    .AE_heroButtons {
+
+        justify-content: center;
+
+    }
+
+
+    .AE_heroStats {
+
+        justify-content: center;
+
+    }
+
+
+    .AE_categoryGrid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .AE_productGrid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .AE_featureGrid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .AE_hero {
+
+        min-height: auto;
+
+    }
+
+
+    .AE_heroInner {
+
+        padding:
+            65px 20px;
+
+    }
+
+
+    .AE_section {
+
+        padding:
+            65px 20px;
+
+    }
+
+
+    .AE_sectionHeading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .AE_categoryGrid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .AE_productGrid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .AE_productImage {
+
+        height: 220px;
+
+    }
+
+
+    .AE_cta {
+
+        width:
+            calc(100% - 40px);
+
+        margin-bottom: 65px;
+
+        padding:
+            45px 25px;
+
+    }
+
+
+    .AE_ctaLogo {
+
+        opacity: .5;
+
+        right: 10px;
+
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .AE_heroContent h1 {
+
+        font-size: 43px;
+
+        letter-spacing: -1px;
+
+    }
+
+
+    .AE_heroVisual {
+
+        min-height: 370px;
+
+    }
+
+
+    .AE_visualCircle {
+
+        width: 300px;
+
+    }
+
+
+    .AE_bigLogo {
+
+        width: 85px;
+
+        height: 85px;
+
+        font-size: 28px;
+
+    }
+
+
+    .AE_visualInner h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .AE_floatCard {
+
+        padding:
+            9px 11px;
+
+    }
+
+
+    .AE_floatTop {
+
+        top: 12px;
+
+        right: 0;
+
+    }
+
+
+    .AE_floatBottom {
+
+        bottom: 12px;
+
+        left: 0;
+
+    }
+
+
+    .AE_categoryGrid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .AE_productGrid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .AE_productImage {
+
+        height: 260px;
+
+    }
+
+
+    .AE_featureGrid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .AE_heroStats {
+
+        gap: 20px;
+
+    }
+
+
+    .AE_cta {
+
+        min-height: 350px;
+
+    }
+
+
+    .AE_ctaLogo {
+
+        display: none;
+
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+    .AE_home *,
+    .AE_home *::before,
+    .AE_home *::after {
+
+        transition-duration: .01ms !important;
+
+        animation-duration: .01ms !important;
+
+    }
+
+}
+
+</style>
+
+
+<script>
+
+/*
+|--------------------------------------------------------------------------
+| SMOOTH SCROLL
+|--------------------------------------------------------------------------
+*/
+
+document.querySelectorAll(
+    '.AE_home a[href^="#"]'
+).forEach(function(link) {
+
+    link.addEventListener(
+        "click",
+        function(event) {
+
+            const targetId =
+                this.getAttribute("href");
+
+            const target =
+                document.querySelector(targetId);
+
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+    );
+
+});
+
+</script>
